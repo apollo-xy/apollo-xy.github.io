@@ -2,41 +2,47 @@
 <html>
 <head>
 <title>ApolloXY</title>
-      <meta charset="UTF-8">
-      <meta property="og:type" content="website" />
-      <meta property="og:title" content="ApolloXY - About" />
-      <meta property="og:description" content="About Atharva Kolekar - Developer" />
-      <meta property="og:url" content="https://apollo-xy.github.io/about/" />
-      <meta property="og:image" content="https://apollo-xy.github.io/about/img/Logo.jpg">
+<meta charset="UTF-8">
+<meta property="og:type" content="website" />
+<meta property="og:title" content="ApolloXY - About" />
+<meta property="og:description" content="About Atharva Kolekar - Developer" />
+<meta property="og:url" content="https://apollo-xy.github.io/about/" />
+<meta property="og:image" content="https://apollo-xy.github.io/about/img/Logo.jpg">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src=""></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
-<body> 
+<body>
 
     <div class="parallax a">
-        <div id="text1">
+        <div id="text1" data-aos="fade-down">
+        
             <h1>Atharva Kolekar</h1>
             <p>🌐Web Developer</p>
             <p>🧑‍💻Technologist</p>
             <br>
         </div>
+      
     </div>
 
 
 
     <div id="sec11">
 
-        <img src="img/wh.png" width="300">
-        <img src="img/db.png" width="300">
-        <img src="img/ng.png" width="300">
+        <img src="img/wh.png" width="300" data-aos="zoom-in-up">
+        <img src="img/db.png" width="300" data-aos="zoom-in-down">
+        <img src="img/ng.png" width="300" data-aos="zoom-in-up">
       
     </div>
         <div class="parallax b">
-            <div id="text2">
+            <div id="text2" data-aos="fade-right"> 
                 <h1>I'm a Programmer 👨‍💻</h1>
                 <p>Writing code is my passion. It's my calling in life.</p>
                 <p>It promotes logical thinking & gives satisfaction.</p>
@@ -47,7 +53,7 @@
             <img src="img/code2.png" width="100%">          
         </div>
         <div class="parallax c">
-            <div id="text3">
+            <div id="text3" data-aos="fade-left">
                 <h1>I'm Social😋</h1>
                 <p>I am a very social person.</p>
                 <p>I love traveling, meeting new people and adopting myself to new culture.</p>
@@ -76,10 +82,10 @@
         </div>
        
         <div class="parallax d">
-            <div id="text4">
+            <div id="text4" data-aos="zoom-out-right">
                 <h1>I'm Foodie😁</h1>
                 <p>I Live to Eat, than eat to live 😉 </p>
-                <p>Cookig is Love made Edible </p>
+                <p>Cooking is Love made Edible </p>
                 <p>#bornfoodie</p>
                 <br>
             </div>
@@ -98,6 +104,11 @@
     <p>©ApolloXY</p>
     <p>Contact: apollo.xy@hotmail.com</p>
 </div>
-        
+
+<script>
+AOS.init({
+  duration: 1500,
+})
+</script>
 </body>
 </html>
