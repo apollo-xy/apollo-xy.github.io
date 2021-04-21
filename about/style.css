@@ -72,13 +72,14 @@ width: 300px;
 }
 #in a{
     font-size: 18px;
-    color: white;
+    color: yellow;
+    text-decoration: none;
 }
 #aimg{
     position: absolute;
     bottom: 10px;
     left: 20px;
-    
+    color:rgb(255, 255, 255);
 }
 
 #aimg img{
