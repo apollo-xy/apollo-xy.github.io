@@ -126,6 +126,23 @@ justify-content: center;
 
   border: 1px solid rgba(81, 203, 238, 1);
 }
+#form-con button{
+  padding: 7px 10px;
+  margin-bottom: 10px;
+  border: none;
+  color: #fff;
+  background-color: rgb(101, 101, 255);
+  float: left;
+}
+#form-con #result{
+  float: left;
+  display: none;
+text-align: center;
+background-color: chartreuse;
+padding: 5px;
+border-radius: 2px;
+margin: 0 10px 10px;
+}
 #to-con{
   width: 90%;
  
