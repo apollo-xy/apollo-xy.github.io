@@ -1,0 +1,147 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+    
+html{
+
+    height: 100%;
+    width: 100%;
+    scroll-behavior: smooth;
+
+}
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "Lato", sans-serif;
+    background-color: black;
+    overflow-x: hidden;
+    position: relative;
+}
+#header{
+  background-color: #ffa600;
+  width: 100%;
+}
+#web-con{
+
+display: flex;
+justify-content: center;
+position: relative;
+top: -35px;
+}
+#web-con #in{
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+  max-width: 80%;
+  width: 400px;
+  height: 200px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#ser{
+  display: flex;
+  justify-content: center;
+  position: relative;
+ margin-top: 200px;
+  }
+  #ser #in{
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    max-width: 80%;
+    width: 400px;
+    height: 200px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+#main{
+  background: linear-gradient(to bottom, #00ff99 0%, #ccffcc 20%);
+  display: flex;
+  justify-content: center;
+}
+#container{
+  margin: 100px 0;
+  width: 500px;
+  max-width: 90%;
+  background-color: rgb(29, 183, 255);
+  display: flex;
+flex-direction: column;
+  justify-content: center;
+  border-radius: 20px;
+}
+#container #img-logo{
+text-align: center;
+position: relative;
+top: -90px;
+}
+
+#on-soc{
+
+width: 90%;
+background-color: rgb(255, 255, 255);
+margin: -60px auto 0;
+border-radius: 10px;
+display: flex;
+justify-content: center;
+padding: 20px 0;
+
+
+}
+
+#form-con{
+  width: 90%;
+background-color: rgb(255, 255, 255);
+margin: 30px auto;
+
+text-align: center;
+border-radius: 10px;
+
+padding: 30px 0;
+display: flex;
+justify-content: center;
+}
+#form-con form{
+  padding: 0 50px;
+  text-align: left;
+  width: 250px;
+}
+#form-con input, textarea{
+  padding: 10px;
+  background-color: rgb(213, 243, 255);
+  border: none;
+  margin: 10px 0;
+  border-radius: 5px;
+  max-width: 95%;
+  min-width: 95%;
+  transition: 0.1s;
+  outline: none;
+  font-size: 13px;
+}
+#form-con textarea{
+  min-height: 50px;
+}
+#form-con input:focus, textarea:focus {
+  box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+
+  border: 1px solid rgba(81, 203, 238, 1);
+}
+#to-con{
+  width: 90%;
+ 
+  background-color: rgb(255, 255, 255);
+  margin: 0 auto 30px;
+  
+  text-align: center;
+  border-radius: 10px;
+  
+  padding: 30px 0;
+  display: flex;
+  justify-content: center;
+}
+
+#to-con #in{
+  padding: 0 50px;
+  text-align: left;
+  width: 250px;
+}
