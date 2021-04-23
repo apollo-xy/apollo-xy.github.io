@@ -59,23 +59,29 @@
     </div>
     <div id="form-con">
     
-      <form>
+      <form action="#result"onsubmit="myfun()">
         <h2>Send any question, ideas or suggestions</h2>
         <br>
         <p>Complete this form and we will get back to you.</p>
         <br>
 
         <h5>FULL NAME</h5>
-        <input placeholder="Full Name" type="text">
+        <input placeholder="Full Name" type="text" required>
 
         <h5>Email</h5>
-        <input placeholder="Email" type="email">
+        <input placeholder="Email" type="email" required>
 
         <h5>SUBJECT</h5>
-        <input placeholder="Subject" type="text">
+        <input placeholder="Subject" type="text" required>
        
         <h5>Message</h5>
-        <textarea placeholder="Type a message..." type="text"></textarea>
+        <textarea placeholder="Type a message..." type="text" required></textarea>
+        <button type="submit">Send</button>
+        <div id="result">
+        <p>Sent Successfully!</p>
+        </div>
+        <br><br><br>
+    
         <p>We love hearing from users</p>
       </form>
 
@@ -93,4 +99,10 @@
   </div>
 </div>
 
+</body>
+<script>
+  function myfun(){
+    document.getElementById("result").style.display = "block";
+  }
+</script>
 </html>
