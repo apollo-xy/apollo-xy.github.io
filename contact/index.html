@@ -13,7 +13,7 @@
 <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="logo.css">
-<link rel="stylesheet" href="menu1.css">
+<link rel="stylesheet" href="menu.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 </head>
@@ -42,7 +42,7 @@
       <div id="ss">
       <a><img src="https://img.icons8.com/ios-glyphs/30/000000/macos-full-screen.png"/><h2>Full Screen</h2></a>
       <label class="switch">
-        <input type="checkbox">
+        <input type="checkbox" id="fss" onclick="fullScreen();">
         <span class="slider round"></span>
       </label>
     </div>
@@ -172,19 +172,8 @@
   function myfun(){
     document.getElementById("result").style.display = "block";
   }
-  function menu() {
-  var checkBox = document.getElementById("check");
-  var sideNav = document.getElementById("nnav");
-  var conB = document.getElementById("conb");
-  if (checkBox.checked == true){
-    sideNav.style.width = "500px";
-    comB.style.width = "100%";
-    document.body.style.overflow = "hidden";
-  } else {
-    sideNav.style.width = "0px";
-    comB.style.width = "0";
-    document.body.style.overflow = "auto";
-  }
-}
+
 </script>
+<script src="menu.js"></script>
+<script src="fullscreen.js"></script>
 </html>
