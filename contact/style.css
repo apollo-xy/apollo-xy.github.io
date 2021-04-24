@@ -72,7 +72,7 @@ top: -35px;
   margin: 100px 0;
   width: 500px;
   max-width: 90%;
-  background-color: rgb(29, 183, 255);
+  background-color: #1db7ff;
   display: flex;
 flex-direction: column;
   justify-content: center;
@@ -128,7 +128,7 @@ justify-content: center;
   font-size: 13px;
 }
 #form-con textarea{
-  min-height: 50px;
+  min-height: 80px;
 }
 #form-con input:focus, textarea:focus {
   box-shadow: 0 0 5px rgba(81, 203, 238, 1);
@@ -170,3 +170,43 @@ margin: 0 0px 10px;
   text-align: left;
   width: 250px;
 }
+
+#footer {
+  width: 100%;
+  background-color: #1db7ff;
+  text-align: center;
+}
+#footer p{
+color: #111;
+font-size: 18px;
+line-height: 25px;
+}
+#footer a{
+  color: rgb(4, 0, 255);
+font-size: 18px;
+line-height: 25px;
+
+}
+#footer #ff{
+  padding: 30px;
+}
+.goog-te-banner-frame.skiptranslate {
+
+  display: none !important;
+  } 
+  .goog-logo-link {
+    display:none !important;
+} 
+    
+.goog-te-gadget{
+    color: transparent !important;
+}
+ #google_translate_element{
+   margin: 0 auto;
+   padding: 10px;
+   background-color: transparent;
+   width: max-content;
+ } 
+ #google_translate_element select{
+   padding: 5px;
+ }
