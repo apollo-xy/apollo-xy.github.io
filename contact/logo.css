@@ -1,8 +1,6 @@
 #logo-con{
-    display: flex;
-    justify-content: center;
-
-  
+display: flex;
+justify-content: space-around;
   }
 
   #logo {  
@@ -13,12 +11,14 @@
 
    }
   #logo h2 { 
+
     color:#ffffff; 
     text-shadow: 2px 3px rgba(0,0,0,0.2);
   }
-  #logo h2 span { float: right; color:#fbff00;}
+  #logo h2 span { float: right; color:#fbff00; float:initial;}
 
   #nav {
+    display: block;
     margin-top: 80px;
 padding: 20px;
 text-align: center;
@@ -42,5 +42,12 @@ z-index: 100;
  }
 
  @media screen and (max-width: 600px) {
-  #logo-con{float: left;}
+  
+  #nav {
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+
+  }
+
 }
