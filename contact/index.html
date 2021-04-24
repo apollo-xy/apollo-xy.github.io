@@ -13,12 +13,21 @@
 <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="logo.css">
+<link rel="stylesheet" href="menu.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 </head>
 <body>
 
 <div id="header">
+  <div class="sidenav" id="nnav"></div>
+  <label>
+    <input type="checkbox" id="check" onclick="menu();"> 
+    <span></span>
+    <span></span>
+    <span></span>
+  </label>
+ 
   <div id="logo-con">   
     <div id="logo">
       <h2>Apollo<span>XY</span></h2> 
@@ -115,5 +124,14 @@
   function myfun(){
     document.getElementById("result").style.display = "block";
   }
+  function menu() {
+  var checkBox = document.getElementById("check");
+  var sideNav = document.getElementById("nnav");
+  if (checkBox.checked == true){
+    sideNav.style.width = "400px";
+  } else {
+    sideNav.style.width = "0px";
+  }
+}
 </script>
 </html>
