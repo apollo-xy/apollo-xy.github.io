@@ -15,7 +15,7 @@
     background: #fff;
     border-radius:10px;
     height:5px;
-    margin: 3px;
+    margin: 3px -2px;
     transition: .4s  cubic-bezier(0.68, -0.6, 0.32, 1.6);
   
   }
@@ -39,6 +39,7 @@
   
   #label input[type="checkbox"]{
     display:none;
+
   }
   
   
@@ -65,7 +66,7 @@
   
   .sidenav {
     height: 100%;
-    width: 0px;
+    width: 0;
     position: fixed;
     z-index: -1;
     top: 0;
@@ -75,6 +76,10 @@
     transition: 0.5s;
     padding-top: 60px;
     
+  }
+
+  .sidenav::-webkit-scrollbar {
+    display: none;
   }
   #con{
     
@@ -134,6 +139,7 @@ width: 30px;
   background-color: #ccc;
   -webkit-transition: .4s;
   transition: .4s;
+  z-index: -10;
 }
 
 .slider:before {
@@ -177,3 +183,48 @@ input:checked + .slider:before {
   top: 0;
   background-color: #6f90e9;
 }
+
+#geo-con{
+  width: 250px;
+  background-color: rgb(238, 238, 238);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+#geo-con h2{
+color: #000;
+}
+
+#geo-con div{
+  font-size: 20px;
+  font-weight: bold;
+  color: #000;
+  float: left;
+  padding: 2px 0;
+  }
+
+  #dwn-app-div{
+    background-color: rgb(238, 238, 238);
+    color: rgb(4, 0, 255);
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  
+  #dwn-app-div button{
+    padding: 10px;
+    font-size: 19px;
+    background-color: rgb(255, 239, 16);
+    color: rgb(0, 0, 0);
+    outline: none;
+    border: 2px solid black;
+  }
+
+  #dwn-app-div button:hover{
+
+    background-color: rgb(255, 147, 23);
+    outline: none;
+
+  }
