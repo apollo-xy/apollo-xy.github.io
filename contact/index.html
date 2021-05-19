@@ -28,9 +28,11 @@
 
       </div>
       <div id="con">
+        <h3>General</h3>
         <a href="/home"><img src="https://img.icons8.com/metro/30/000000/home.png"/><h2>Home</h2></a>
         <a href="/games"><img src="https://img.icons8.com/ios-glyphs/30/000000/controller.png"/><h2>Games</h2></a>
         <a href="/blog"><img src="https://img.icons8.com/material/24/000000/wordpress--v1.png"/><h2>Blog</h2></a>
+        <a href="/faq"><img src="https://img.icons8.com/metro/26/000000/faq.png"/><h2>FAQ</h2></a>
         <a href="/about"><img src="https://img.icons8.com/android/24/000000/about.png"/><h2>About us</h2></a>
         <a href="/contact"><img src="https://img.icons8.com/ios-filled/50/000000/contact-card.png"/><h2>Contact us</h2></a>
         <br><br>
@@ -47,14 +49,44 @@
       </label>
     </div>
     <div id="ss">
+      <a><img src="https://img.icons8.com/material/24/000000/worldwide-location--v1.png"/><h2>Location</h2></a>
+      <label class="switch">
+        <input type="checkbox" id="loc" onclick="getLocation();">
+        <span class="slider round"></span>
+      </label>
+      </div>
+    <div id="ss">
       <a><img src="https://img.icons8.com/ios-glyphs/30/000000/cookie.png"/><h2>Cookie</h2></a>
       <label class="switch">
-        <input type="checkbox" checked>
+        <input type="checkbox">
         <span class="slider round"></span>
       </label>
       </div>
       <br><br>
+      <h3>User Info</h3>
+     
+      <div id="geo-con">
+        <div>Date: <span id="date"></span></div>
+        <div>Time: <span id="time"></span></div>
+        <div>IP: <span id="ip"></span></div>
+        <div>Country: <span id="country"></span><img id="flag"></div>
+        <div>City: <span id="city"></span></div>
+        <div>Postal: <span id="postal"></span></div>
+        <div>Time Zone: <span id="timezone"></span></div>
+        <div>Latitude: <span id="latitude"></span></div>
+        <div>Longitude: <span id="longitude"></span></div>
+        <div>Org: <span id="org"></span></div>
+        <div>Language: <span id="lang"></span></div>
+        <div>Browser: <span id="browser"></span></div>
+        <div>System: <span id="os"></span></div>
+        <div>Battery Charging: <span id="charging"></span></div>
+        <div>Battery Level: <span id="battery"></span></div>
+ 
+    
+      </div>
+      <br><br>
       <h3>Legal</h3>
+    
       <a href="/disclaimer"><img src="https://img.icons8.com/ios-glyphs/30/000000/error.png"/><h2>Disclaimer</h2></a>
       <a href="/terms"><img src="https://img.icons8.com/material-rounded/24/000000/terms-and-conditions.png"/><h2>Terms of service</h2></a>
       <a href="/privacy"><img src="https://img.icons8.com/material/24/000000/privacy-policy.png"/><h2>Privacy policy</h2></a>
@@ -66,8 +98,16 @@
         <a href="https://twitter.com/xy_apollo"><img src="https://img.icons8.com/android/30/000000/twitter.png"/></a>
         <a href="https://www.instagram.com/apolloxy.git/"><img src="https://img.icons8.com/android/30/000000/instagram.png"/></a>
         <a href="https://www.youtube.com/channel/UCJQ7ZWXIbAqN9qyJEJgPG8A"><img src="https://img.icons8.com/material-sharp/30/000000/youtube-play.png"/></a>
-     
+      
       </div>
+      <div id="dwn-app-div">
+        <h2>Download WebApp </h2>
+        <br><br><br>
+        <button>Install</button>
+        
+        
+      </div>
+     
       </div>
     </div>
     <div id="logo">
@@ -84,18 +124,7 @@
   
 </div>
 
-<div id="main">
-  <div id="nav">
-    <a href="/disclaimer"><button class="button">DISCLAIMER</button></a>
-    <a href="/terms"><button class="button">TERMS OF SERVICES</button></a>
-      <a href="/privacy"><button class="button">PRIVACY POLICY</button></a>
-        <a href="cookie"><button class="button">COOKIE POLICY</button></a>
-        <a href="/faq"><button class="button">FAQ</button></a>
-          <a href="/about"><button class="button">ABOUT</button></a>
-            <a href="/contact"><button class="button active">CONTACT US</button></a>
-              <a href="/delete"><button class="button">DELETE ACCOUNT</button></a>
-   </div>
-
+<div id="main1">
    <div id="main2">
   <div id="container">
     <div id="img-logo">
@@ -172,8 +201,8 @@
 <div id="footer">
   <div id="ff">
     <p>Made with ❤️ by ApolloXY</p>
-    <p>ApolloXY©2021 </p>
-    
+    <p>ApolloXY©2021</p>
+    <br>
     <p><a href="/terms">Terms</a> | <a href="/privacy">Privacy</a> | <a href="/about">About</a> | <a href="/faq">FAQ</a> | <a href="/contact">Contact</a></p>
     <div id="google_translate_element"></div>
     <div id="sv">
@@ -188,6 +217,8 @@
 </div>
 
 </body>
+<script src="geo.js"></script>
+   
 <script>
   function myfun(){
     document.getElementById("result").style.display = "block";
@@ -195,6 +226,14 @@
 
 </script>
 <script> 
+/*
+window.setInterval(function(){
+     lang = $("select.goog-te-combo option:selected").text();
+     if(lang=="Select Language"){alert("English");}
+     else{ alert(lang)}
+},5000);
+*/
+
   function googleTranslateElementInit() {
     new google.translate.TranslateElement({
       pageLanguage: 'en'
