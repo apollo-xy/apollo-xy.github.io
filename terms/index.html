@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ApolloXY Terms</title>
+<meta charset="UTF-8">
+<meta property="og:type" content="website" />
+<meta property="og:title" content="ApolloXY Terms" />
+<meta property="og:description" content="Terms and Conditions" />
+<meta property="og:url" content="https://apollo-xy.github.io/terms/" />
+<meta property="og:image" content="https://apollo-xy.github.io/terms/img/Logo.jpg">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="logo.css">
+<link rel="stylesheet" href="menu.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+<body>
+
+<div id="header">
+   
+ 
+  <div id="logo-con"> 
+    <div class="sidenav" id="nnav">
+      <div id="conb">
+
+      </div>
+      <div id="con">
+        <h3>General</h3>
+        <a href="/home"><img src="https://img.icons8.com/metro/30/000000/home.png"/><h2>Home</h2></a>
+        <a href="/games"><img src="https://img.icons8.com/ios-glyphs/30/000000/controller.png"/><h2>Games</h2></a>
+        <a href="/blog"><img src="https://img.icons8.com/material/24/000000/wordpress--v1.png"/><h2>Blog</h2></a>
+        <a href="/faq"><img src="https://img.icons8.com/metro/26/000000/faq.png"/><h2>FAQ</h2></a>
+        <a href="/about"><img src="https://img.icons8.com/android/24/000000/about.png"/><h2>About us</h2></a>
+        <a href="/contact"><img src="https://img.icons8.com/ios-filled/50/000000/contact-card.png"/><h2>Contact us</h2></a>
+        <br><br>
+        <h3>Accounts</h3>
+       <a href="login"><img src="https://img.icons8.com/material/30/000000/user-male-circle--v1.png"/><h2>Log In</h2></a>
+      <a href="signup"><img src="https://img.icons8.com/ios-glyphs/30/000000/login-rounded-right.png"/><h2>Sign Up</h2></a>
+      <br><br>
+      <h3>Settings</h3>
+      <div id="ss">
+      <a><img src="https://img.icons8.com/ios-glyphs/30/000000/macos-full-screen.png"/><h2>Full Screen</h2></a>
+      <label class="switch">
+        <input type="checkbox" id="fss" onclick="fullScreen();">
+        <span class="slider round"></span>
+      </label>
+    </div>
+    <div id="ss">
+      <a><img src="https://img.icons8.com/material/24/000000/worldwide-location--v1.png"/><h2>Location</h2></a>
+      <label class="switch">
+        <input type="checkbox" id="loc" onclick="getLocation();">
+        <span class="slider round"></span>
+      </label>
+      </div>
+    <div id="ss">
+      <a><img src="https://img.icons8.com/ios-glyphs/30/000000/cookie.png"/><h2>Cookie</h2></a>
+      <label class="switch">
+        <input type="checkbox">
+        <span class="slider round"></span>
+      </label>
+      </div>
+      <br><br>
+      <h3>User Info</h3>
+     
+      <div id="geo-con">
+        <div>Date: <span id="date"></span></div>
+        <div>Time: <span id="time"></span></div>
+        <div>IP: <span id="ip"></span></div>
+        <div>Country: <span id="country"></span><img id="flag"></div>
+        <div>City: <span id="city"></span></div>
+        <div>Postal: <span id="postal"></span></div>
+        <div>Time Zone: <span id="timezone"></span></div>
+        <div>Latitude: <span id="latitude"></span></div>
+        <div>Longitude: <span id="longitude"></span></div>
+        <div>Org: <span id="org"></span></div>
+        <div>Language: <span id="lang"></span></div>
+        <div>Browser: <span id="browser"></span></div>
+        <div>System: <span id="os"></span></div>
+        <div>Battery Charging: <span id="charging"></span></div>
+        <div>Battery Level: <span id="battery"></span></div>
+ 
+    
+      </div>
+      <br><br>
+      <h3>Legal</h3>
+    
+      <a href="/disclaimer"><img src="https://img.icons8.com/ios-glyphs/30/000000/error.png"/><h2>Disclaimer</h2></a>
+      <a href="/terms"><img src="https://img.icons8.com/material-rounded/24/000000/terms-and-conditions.png"/><h2>Terms of service</h2></a>
+      <a href="/privacy"><img src="https://img.icons8.com/material/24/000000/privacy-policy.png"/><h2>Privacy policy</h2></a>
+      <a href="/cookie"><img src="https://img.icons8.com/ios-glyphs/30/000000/cookie.png"/><h2>Cookie policy</h2></a>
+      <br><br>
+      <h3>Follow Us!</h3>
+      <div id="sv">
+        <a href="https://www.facebook.com/apolloxy.git"><img src="https://img.icons8.com/android/30/000000/facebook.png"></a>
+        <a href="https://twitter.com/xy_apollo"><img src="https://img.icons8.com/android/30/000000/twitter.png"/></a>
+        <a href="https://www.instagram.com/apolloxy.git/"><img src="https://img.icons8.com/android/30/000000/instagram.png"/></a>
+        <a href="https://www.youtube.com/channel/UCJQ7ZWXIbAqN9qyJEJgPG8A"><img src="https://img.icons8.com/material-sharp/30/000000/youtube-play.png"/></a>
+      
+      </div>
+      <div id="dwn-app-div">
+        <h2>Download WebApp </h2>
+        <br><br><br>
+        <button>Install</button>
+        
+        
+      </div>
+     
+      </div>
+    </div>
+    <div id="logo">
+      <h2>Apollo<span>XY</span></h2> 
+      
+    </div>   
+  </div>
+  <label id="label">
+    <input type="checkbox" id="check" onclick="menu();"> 
+    <span></span>
+    <span></span>
+    <span></span>
+  </label> 
+  
+</div>
+
+<div id="main1">
+   <div id="main2">
+  <div id="container">
+    <div id="img-logo">
+      <img src="img/logo.png" height="150">  
+      <h1 >ApolloXY</h1>
+      <h3>Terms of Service</h3>
+    </div>
+
+    <div id="to-con" style="margin: -60px auto 30px;">
+      <p></p><br>
+
+      <div id="in">
+       
+        <h2>Acknowledgement</h2>
+        <p>Welcome to ApolloXY (together, the "Website").</p><br>
+        <p>ApolloXY(“us”, “we”, or “our”) operates the apollo-xy.github.io and apolloxy.scienceontheweb.net  website (the “Service”).</p>
+        <br>
+        <p>PLEASE READ THESE TERMS OF SERVICE CAREFULLY. THIS AGREEMENT GOVERNS YOUR RELATIONSHIP WITH APOLLOXY AND USE OF THE SERVICES PROVIDED THROUGH THE WEBSITE. APOLLOXY HEREBY REQUESTS THAT YOU ACCEPT THESE TERMS OF SERVICE. YOU MAY USE THE SERVICES PROVIDED THROUGH THE WEBSITE ONLY ON THE CONDITION THAT YOU ACCEPT ALL OF THE TERMS AND CONDITIONS CONTAINED HEREIN. USING THE SERVICES PROVIDED THROUGH THE WEBSITE INDICATES THAT YOU ACCEPT THESE TERMS OF SERVICE. <u>IF YOU DO NOT ACCEPT THESE TERMS OF SERVICE, DO NOT USE THE WEBSITE OR SERVICES.</u> </p><br>
+        <p>THESE TERMS OF SERVICE INCLUDES THE PRIVACY POLICY LOCATED AT <a href="/privacy">https://apollo-xy.github.io/privacy</a> WHICH IS INCORPORATED AND MADE A PART OF THESE TERMS OF SERVICE.</p><br>
+     
+      </div>
+    </div>
+
+    <div id="to-con">
+      <p></p><br>
+
+      <div id="in">
+  
+        <h2>Acceptance of Terms of Service</h2>
+        <p>These Terms of Service (the "Agreement" or "Terms of Service") is a legally-binding agreement between you, either an individual or an entity ("you" or "user"), and ApolloXY, regarding use of Website. Your access to and use of the Services are conditioned on your acceptance of and compliance with these Terms. These Terms apply to all visitors, users and others who access or use the Services.</p><br>
+      </div>
+    </div>
+
+    <div id="to-con">
+      <p></p><br>
+
+      <div id="in">
+  
+        <h2>Our Terms and Condition:</h2>
+        <p>By using ApolloXY services, you agree to be bound by the following terms and conditions:</p><br>
+      
+        <h3 id="intellectual-property">1. Intellectual Property:</h3>
+        <p>We respect the intellectual property rights of others. You may not infringe the copyright, trademark or other proprietary informational rights of any party. All of the media information you got via our service is only for personal use. You bear full responsibility for all actions related to the data.</p><br>
+
+        <h3 id="link-to-other-websites">2. Links To Other Websites:</h3>
+        <p>This website may have links to third party websites. We assumes no responsibility for the content, privacy policies, or practices of these websites. You may read the terms and conditions and privacy policy of the websites that you access.</p><br>
+
+        <h3 id="changes">3. Changes to Site Terms</h3>
+        <p>ApolloXY reserves the right to change any of the terms and conditions contained in the Site Terms or any policy or guideline of the Site, at any time and in its sole discretion. When we make changes, we will revise the “last updated” date at the top of the Site Terms. Any changes will be effective immediately upon posting on the Site. Your continued use of the Site following the posting of changes will constitute your acceptance of such changes. We encourage you to review the Site Terms whenever you visit one of our websites.</p><br>
+        <p>We reserve the right to change or discontinue any of the services at any time.</p><br>
+
+        <h3 id="warranties-and-disclaimer">4. Warranties and Disclaimer:</h3>
+        <p>The information available through the Site is provided solely for informational purposes on an “as is” basis at user’s sole risk. ApolloXY makes no guarantees as to the accurateness, quality, or completeness of the information and ApolloXY shall not be responsible or liable for any errors, omissions, or inaccuracies in the information or for any user’s reliance on the information. User is solely responsible for verifying the information as being appropriate for user’s personal use. We will try our best to assure a good quality of our service. We do not offer any guarantee of any kind as for use of this service.</p><br>
+      
+        <h3 id="ability-to-accept-terms-of-service">5. Ability to Accept Terms of Service:</h3>
+        <p>The Site is not intended for users under 10 years of age. If you are under 10, do not use the Site and do not provide us with any personal information.</p><br>
+
+        <h3 id="no-copyright-infringement-intended">6. No Copyright Infringement Intended</h3>
+        <p>All trademarks, service marks and company names are the property of their respective owners.</p><br>
+
+        <h3 id="damage-or-loss">7. Damage or Loss</h3>
+        <p>In case of any direct, indirect, special or incidental damage, we shall not be liable on our part.</p><br>
+      
+        <h3 id="user-account">8. User Account:</h3>
+        <p>a) You may sign up for a personalized account ("User Account") with ApolloXY in order to access the full range of features offered by the Website and Services. In creating your User Account, you agree to submit accurate, current and complete information about yourself and keep this information updated. We reserves the right to suspend or terminate User Accounts which it suspects are used in contradiction to these Terms of Service and/or contain information that is untrue, inaccurate, not current or incomplete.</p><br>
+        <p>b) When you create your User Account, you will choose a personal, non-transferable password. User Accounts may not be "shared" or used by more than one individual. After you accept these Terms of Service and your User Account registration has been accepted by ApolloXY, your User Account will be established. You are solely responsible for any and all activities that occur under your User Account, whether or not such use was authorized by you.</p><br>
+      
+        <h3 id="your-content">9. Your Content:</h3>
+        <p>When you upload text, software, scripts, graphics, photos, sounds, music, videos, audio-visual combinations, interactive features and other materials that may be viewed on, or accessed through the Services, we refer to it as “Your Content”. You retain all of your ownership rights in your Content. We don’t claim any ownership in or to any of your Content.</p><br>
+
+        <h3 id="services-on-service">10.Services on the service :</h3>
+        <p>a) You acknowledge that the Service is a general-purpose tool. Specifically, but without limitation, the Service allows you to access media on multiple other platforms and to, among other things, download and/or convert that media. The Service may only be used in accordance with law. We do not encourage, condone, induce, or allow any use of the Service that may be in violation of any law. We explicitly prohibit the use of the Service to download any content in violation of copyright laws.</p><br>
+        <p>b) To the extent that we may store any User Submissions whatsoever, we do not intend to store any User Submissions for anything longer than a transitory period of time to give users chance to download their content.</p><br>
+
+
+      </div>
+    </div>
+    <div id="to-con">
+      <div id="in">
+        <h2>Privacy Policy</h2>
+        <p>ApolloXY is committed to protecting your privacy. Please refer to our Privacy policy for information on how we collect, use and disclose personal information.</p><br>
+      </div>
+    </div>
+
+    <div id="to-con">
+      <p></p><br>
+      <div id="in">
+        <h2>Contact us</h2>
+       <p>If you have any questions about our terms and conditions, please contact us:</p><br>
+       
+       <p><b>Email:</b> <a href="mailto:apollo.xy@yandex.com">apollo.xy@yandex.com</a></p><br>
+       <p><b>Webpage:</b> <a href="https://apollo-xy.github.io/contact">https://apollo-xy.github.io/contact</a></p><br>
+     
+      </div>
+    </div>
+
+    <div id="to-con" >
+      <div id="in">
+        <h4>Terms of Service - </h4>
+        <p><i>Effective Date: June 1, 2021</i> </p>
+        <p><i>Last Update: May 17, 2021</i> </p>
+      </div>
+    </div>
+
+
+  </div>
+</div>
+</div>
+
+<div id="footer">
+  <div id="ff">
+    <p>Made with ❤️ by ApolloXY</p>
+    <p>ApolloXY©2021</p>
+    <br>
+    <p><a href="/terms">Terms</a> | <a href="/privacy">Privacy</a> | <a href="/about">About</a> | <a href="/faq">FAQ</a> | <a href="/contact">Contact</a></p>
+    <div id="google_translate_element"></div>
+    <div id="sv">
+      <a title="ApolloXY's Facebook page" href="https://www.facebook.com/apolloxy.git"><img src="https://img.icons8.com/android/28/000000/facebook.png"></a>
+      <a title="ApolloXY's Twitter page" href="https://twitter.com/xy_apollo"><img src="https://img.icons8.com/android/30/000000/twitter.png"/></a>
+      <a title="ApolloXY's Instagram page" href="https://www.instagram.com/apolloxy.git/"><img src="https://img.icons8.com/android/28/000000/instagram.png"/></a>
+      <a title="ApolloXY's Youtube page" href="https://www.youtube.com/channel/UCJQ7ZWXIbAqN9qyJEJgPG8A"><img src="https://img.icons8.com/material-sharp/32/000000/youtube-play.png"/></a>
+   
+    </div>
+
+  </div>
+</div>
+
+</body>
+<script src="geo.js"></script>
+   
+<script>
+  function myfun(){
+    document.getElementById("result").style.display = "block";
+  }
+
+</script>
+<script> 
+
+
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'en'
+    }, 'google_translate_element');
+  }
+  </script>
+  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script> <script src="menu.js"></script>
+<script src="fullscreen.js"></script>
+</html>
