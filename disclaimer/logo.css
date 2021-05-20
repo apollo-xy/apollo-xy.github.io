@@ -1,0 +1,31 @@
+#logo-con{
+display: flex;
+justify-content: space-around;
+  }
+
+  #logo {  
+    padding:15px; 
+    font-size: 30px;
+    user-select: none;
+   
+
+   }
+  #logo h2 { 
+
+    color:#ffffff; 
+    text-shadow: 2px 3px rgba(0,0,0,0.2);
+  }
+  #logo h2 span { float: right; color:yellow; float:initial;}
+
+
+
+ @media screen and (max-width: 600px) {
+  
+  #nav {
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+
+  }
+
+}
