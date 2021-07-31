@@ -18,7 +18,10 @@
 <meta name="google-site-verification" content="fCkhRT1ISeBuBGZO3EyZxE3AEYk5jq3-sSyhzY-ZJYg" />
 <meta http-equiv="origin-trial" content="AjvG5dh8QCVXMPAxrjL+6awzYG16b2rYiLwFoBfwm9wPsLVYNJP9Zh3haq/ajd+CHg5VkIWN6dwz87uh0FJ+AQQAAABzeyJvcmlnaW4iOiJodHRwczovL2Fwb2xsby14eS5naXRodWIuaW86NDQzIiwiZmVhdHVyZSI6IldlYkFwcExpbmtDYXB0dXJpbmciLCJleHBpcnkiOjE2MzQwODMxOTksImlzU3ViZG9tYWluIjp0cnVlfQ==">
 
-<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="icon/favicon.ico" type="image/x-icon">
+<link rel="preload" href="icon/transparentLogo.png" as="image">
+<link rel="preload" href="styles/style.css" as="style">
+
 <script src="scripts/check.js"></script>
 <link rel="stylesheet" href="styles/style.css">
 <link rel="stylesheet" href="styles/style2.css">
@@ -28,11 +31,14 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Orbitron">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
+
+
+
 </head>
 <body>
     <div id="loadingFullscreen">
         <div id="imgLogo">
-            <img src="img/transparentLogo.png" alt="logo">
+            <img src="icon/transparentLogo.png" alt="logo">
         </div>
         
         <p id="error-msg">ApolloXY</p>
@@ -98,6 +104,7 @@
             <div>Longitude: <span id="longitude"></span></div>
             <div>Org: <span id="org"></span></div>
             <div>Language: <span id="lang"></span></div>
+            <div>Device: <span id="device"></span></div>
             <div>Browser: <span id="browser"></span></div>
             <div>System: <span id="os"></span></div>
             <div>Battery Charging: <span id="charging"></span></div>
@@ -193,7 +200,9 @@
           <img src="img/banner2.png" alt="banner">
 
  
-       
+          <div id="sec2-title">
+            <button id="install2">Install WebApp</button>
+           </div>
         </div>
 
 
@@ -264,7 +273,8 @@
                 </a>
            
             </div>
-        </div>   
+
+      </div>   
     </div>
     <div id="footer">
         <div id="con-footer">
@@ -298,15 +308,16 @@
 <script>
 
 
-        if ('serviceWorker' in navigator) {
-    navigator.serviceWorker
-      .register('/sw.js')
-      .then(() => { console.log('Service Worker Registered'); });
+
+
+   if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/sw.js')
   }
   
   let deferredPrompt;
   var isInstalled = 1;
-  const addBtn = document.querySelector('#install');
+  const addBtn = document.getElementById('install');
+  const addBtn2 = document.getElementById('install2');
   document.getElementById("openAPPid").style.display = "block";
   document.getElementById("install").style.display = "none";
   window.addEventListener('beforeinstallprompt', (e) => {
@@ -316,6 +327,19 @@
      document.getElementById("install").style.display = "block";
   
     addBtn.addEventListener('click', () => {
+      deferredPrompt.prompt();
+       deferredPrompt.userChoice.then((choiceResult) => {
+        if (choiceResult.outcome === 'accepted') {
+          document.getElementById("openAPPid").style.display = "block";
+          document.getElementById("install").style.display = "none";
+          console.log('User accepted the A2HS prompt');
+        } else {
+          console.log('User dismissed the A2HS prompt');
+        }
+        deferredPrompt = null;
+      });
+    });
+    addBtn2.addEventListener('click', () => {
       deferredPrompt.prompt();
        deferredPrompt.userChoice.then((choiceResult) => {
         if (choiceResult.outcome === 'accepted') {
