@@ -12,7 +12,7 @@ window.addEventListener('load', (event) => {
       goesOffline();
     }else{
 
-    if(window.parent.location.hostname == "127.0.0.1" || window.parent.location.hostname == "apo77.loca.lt"){
+    if(window.parent.location.hostname == "apollo-xy.github.io"){
        // stopLoading();
         //showMain();
        if(window.innerWidth >300 && window.innerHeight >400){
