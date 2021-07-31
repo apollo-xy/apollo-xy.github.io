@@ -1,5 +1,5 @@
 const OFFLINE_VERSION = 1;
-const CACHE_NAME = 'offline';
+const CACHE_NAME = 'offlineV1';
 // Customize this with a different URL if needed.
 const OFFLINE_URL = 'offline.html';
 
