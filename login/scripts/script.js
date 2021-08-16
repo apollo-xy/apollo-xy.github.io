@@ -122,7 +122,7 @@ function checkAuth(){
      
       }
         
-    }, 500);
+    }, 1500);
     
 }
 
