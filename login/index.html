@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Ct ompatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#4285f4">
+    <meta name="author" content="Atharva">
+    <meta name="application-name" content="ApolloXY">
+    <meta name="keywords" content="Login, ApolloXY Login, apolloxy Login, apollo-xy Login, Apollo-XY Login, apolloxy.git, apollo_xy, xy_apollo">
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Login to ApolloXY" />
+    <meta property="og:site_name" content="ApolloXY" />
+    <meta property="og:description" content="ApolloXY-Connecting People to Digital Network" />
+    <meta property="og:url" content="https://apollo-xy.github.io/login" />
+    <meta property="og:image" content="https://apollo-xy.github.io/icon/banner1.jpg">
+    <meta name="google-site-verification" content="fCkhRT1ISeBuBGZO3EyZxE3AEYk5jq3-sSyhzY-ZJYg" />
+    <meta http-equiv="origin-trial" content="AjvG5dh8QCVXMPAxrjL+6awzYG16b2rYiLwFoBfwm9wPsLVYNJP9Zh3haq/ajd+CHg5VkIWN6dwz87uh0FJ+AQQAAABzeyJvcmlnaW4iOiJodHRwczovL2Fwb2xsby14eS5naXRodWIuaW86NDQzIiwiZmVhdHVyZSI6IldlYkFwcExpbmtDYXB0dXJpbmciLCJleHBpcnkiOjE2MzQwODMxOTksImlzU3ViZG9tYWluIjp0cnVlfQ==">
+
+    <link rel="shortcut icon" href="https://apollo-xy.github.io/icon/favicon.ico" type="image/x-icon">
+    <link rel="preload" href="Apologo.png" as="image">
+    <link rel="preload" href="https://apollo-xy.github.io/icon/transparentLogo.png" as="image">
+    <link rel="preload" href="styles/style.css" as="style">
+    <link rel="preload" href="styles/loading.css" as="style">
+    <title>Login to ApolloXY</title>
+
+    <script src="scripts/check.js" defer></script>
+
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/loading.css">
+
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-auth.js"></script>
+
+</head>
+<body>
+    <div id="loadingFullscreen">
+        <div id="imgLogo">
+            <img src="http://apollo-xy.github.io/icon/transparentLogo.png" alt="logo">
+        </div>
+        
+        <p id="error-msg">ApolloXY</p>
+        <div id="dots">
+            <div class="loadingDot loadingDot--1"></div>        
+            <div class="loadingDot loadingDot--2"></div>        
+            <div class="loadingDot loadingDot--3"></div>        
+            <div class="loadingDot loadingDot--4"></div>
+        </div>
+    </div> 
+    <div id="warpper">
+        <div id="main-con">
+            <img src="Apologo.png" alt="logo">
+            <h1>Login to <span class="logo1">Apollo</span><span class="logo2">XY</span></h1>
+            <div id="form1">
+                <div id="form1-in">
+                    <div class="input-group">
+                        <input id="txtEmail"  type="text" required>
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>Username / E-mail</label>
+                    </div>
+                        
+                    <div class="input-group">
+                        <input id='txtPassword' type="password" required>
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>Password</label>
+                    </div>
+
+                    <div id="forget-div">
+                        <a href="/resetPass" target="_blank">Forgot Password?</a>
+                    </div>
+                </div>
+                <div id="error-con">
+                  <p>Wrong Username/Email/Password !</p>
+                </div>
+                <button id="btnLogin" class="logbtn" >Login</button>
+        
+            </div>
+
+
+            <div id="form2">
+                <div id="qr-con">
+                    <img id="qrcode-img" src="" alt="qr">                   
+                    <h1 id="qrcode"></h1><span id="updQR">&#x21bb;</span>
+                    <div id="error-con2">
+                        <p>Error Occured !</p>
+                    </div>
+                </div>
+            </div>
+            <div id="signup-div">
+                <p>OR</p>
+                <p>Login with <a id="qr-btn">QR-Code</a> <a id="em-btn">Email</a></p>
+                <p>Don't have an Account? <a href="/signup" target="_blank">Signup</a></p>
+            </div>
+
+            <div class="bottom-text">
+                <a href="/terms" target="_blank">Terms</a> | <a href="/privacy" target="_blank">Privacy</a>
+            </div>
+
+           
+
+        </div>
+    </div>
+   
+</body>
+<script src="scripts/script.js" async></script>
+
+    
+</html>
