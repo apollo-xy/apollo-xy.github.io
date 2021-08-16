@@ -1,0 +1,265 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+    
+html{
+
+    height: 100%;
+    width: 100%;
+    scroll-behavior: smooth;
+  
+
+}
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "Lato", sans-serif;
+    overflow-x: hidden;
+    position: relative;
+    background: linear-gradient(to bottom right, #4285f4 0%, #ff66ff 100%) fixed;
+    color: #000;
+    position: absolute;
+}
+
+#warpper{
+ 
+  width: 300px;
+  margin: 40px auto;
+  background-color: #fcfdfd;
+  border-radius: 20px;
+  animation: animatezoom 1.5s ;
+  padding-bottom: 30px;
+ 
+
+
+}
+#main-con{
+    text-align: center;
+
+}
+#main-con img{
+    width: 120px;
+    margin: 30px auto 10px;
+    position: relative;
+}
+
+#main-con h1{
+    text-align: center;
+    font-size:22px;
+    font-weight:normal;
+    letter-spacing:-.5px
+    
+  }
+#main-con h1 span.logo1{color:darkblue;}
+#main-con h1 span.logo2 {color:#ff0077;}
+
+#form1{
+
+  display: block;
+   
+}
+#form1-in{
+  padding: 0 40px;
+
+ 
+}
+#form2{
+  
+    margin: 0 40px;
+    display: none;
+    text-align: center;
+}
+#form2 img{
+    margin: 10px;
+    width: 110px;
+    height: 110px;
+    object-fit: none;
+}
+#form2 h1{
+width: fit-content;
+padding: 5px ;
+margin: 0 auto;
+font-weight: bold;
+border: 2px black solid;
+}
+#em-btn{display: none; font-weight:bold;}
+#qr-btn{display: inline; font-weight: bold;}
+.input-group {
+    position: relative;
+    margin: 40px 0 20px;
+
+  
+  }
+  input {
+    font-size: 18px;
+    color: #333;
+    padding: 10px 0px 10px 0px;
+    display: block;
+    width: 100%;
+    border: none;
+    background: none;
+    border-bottom: 1px solid #757575;
+
+    
+  }
+  
+  input:focus {
+    outline:none;
+   
+  }
+  label {
+  
+    color: #999;
+    font-size: 18px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    background: none;
+    left: 0px;
+    top: 10px;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+  }
+  
+  input:focus ~ label,
+  input:valid ~ label {
+
+    top: -20px;
+    font-size: 16px;
+    color: rgb(255, 0, 98);
+  }
+  
+  .bar {
+    position: relative;
+    display:block;
+    width:100%;
+  }
+  
+  .bar:before,
+  .bar:after {
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: 1px;
+    position: absolute;
+    background: #0011ff;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+  }
+  
+  .bar:before {
+    left: 50%;
+  }
+  
+  .bar:after {
+    right: 50%;
+  }
+  
+  input:focus ~ .bar:before,
+  input:focus ~ .bar:after {
+    width: 50%;
+  }
+  
+  .highlight {
+    position: absolute;
+    height: 60%;
+    width: 100px;
+    top: 25%;
+    left: 0;
+    pointer-events: none;
+    opacity: 0.5;
+  }
+  
+  #forget-div{
+    text-align: left;
+    margin-top: -10px;
+    margin-bottom: 20px;
+  }
+  
+  #forget-div a{
+    font-size: 13px;
+    color: #008cff;
+    text-decoration: none;
+
+  }
+  #error-con{
+    color: red;
+    font-size: 15px;
+    font-weight: bold;
+    display: none;
+  }
+  #error-con2{
+    color: red;
+    font-size: 15px;
+    font-weight: bold;
+    display: none;
+  }
+  .logbtn{
+    display: block;
+    width: 70%;
+    height: 50px;
+    margin: 10px auto;
+    border: 1px solid #33ccff;
+    background: linear-gradient(120deg,#33ccff,#ff99cc,#33ccff);
+    font-size: 16px;
+    font-weight: bold;
+    background-size: 200%;
+    color: #fff;
+    outline: none;
+    cursor: pointer;
+    transition: .7s;
+    animation: logAni 3s ease infinite;
+  }
+  .logbtn:hover{
+
+    animation: none;
+    background-position: right;
+
+  }
+
+  @keyframes logAni { 
+    0%{background-position:10% 0%}
+    50%{background-position:91% 100%}
+    100%{background-position:10% 0%}
+}
+  #signup-div{
+    font-size: 15px;
+    line-height: 20px;
+    margin: 10px 0;
+    padding: 0 2px;
+
+  }
+  
+  #signup-div a{
+    
+    cursor: pointer;
+    color: #0084ff;
+    text-decoration: none;
+  }
+  .bottom-text{
+    text-align: center;
+    font-size: 13px;
+  }
+
+  #updQR{
+    font-size: 22px;
+    user-select: none;
+    font-weight: bold;
+    
+  }
+@media only screen and (max-width: 870px) {
+    #warpper{
+        width: 300px;
+
+    }
+}
+
+  @keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+  }
