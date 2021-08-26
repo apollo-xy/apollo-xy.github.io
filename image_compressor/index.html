@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Image Compressor · ApolloXY</title>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#4285f4">
+    <meta name="author" content="Atharva">
+    <meta name="application-name" content="ApolloXY">
+    <meta name="keywords" content="Image Compressor, ApolloXY Compressor, apolloxy Compressor, apollo-xy Compressor, Apollo-XY Compressor, apolloxy.git, apollo_xy, xy_apollo">
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Image Compressor · ApolloXY" />
+    <meta property="og:site_name" content="ApolloXY" />
+    <meta property="og:description" content="Compress JPG, PNG or GIF with the best quality and compression." />
+    <meta property="og:url" content="https://apollo-xy.github.io/image_compressor" />
+    <meta property="og:image" content="https://apollo-xy.github.io/icon/banner1.jpg">
+    <meta name="google-site-verification" content="fCkhRT1ISeBuBGZO3EyZxE3AEYk5jq3-sSyhzY-ZJYg" />
+    <meta http-equiv="origin-trial" content="AjvG5dh8QCVXMPAxrjL+6awzYG16b2rYiLwFoBfwm9wPsLVYNJP9Zh3haq/ajd+CHg5VkIWN6dwz87uh0FJ+AQQAAABzeyJvcmlnaW4iOiJodHRwczovL2Fwb2xsby14eS5naXRodWIuaW86NDQzIiwiZmVhdHVyZSI6IldlYkFwcExpbmtDYXB0dXJpbmciLCJleHBpcnkiOjE2MzQwODMxOTksImlzU3ViZG9tYWluIjp0cnVlfQ==">
+
+    <link rel="shortcut icon" href="https://apollo-xy.github.io/icon/favicon.ico" type="image/x-icon">
+    <link rel="preload" href="Apologo.png" as="image">
+    <link rel="preload" href="https://apollo-xy.github.io/icon/transparentLogo.png" as="image">
+    <link rel="preload" href="styles/style1.css" as="style">
+
+    
+    <link rel="stylesheet" href="styles/style1.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Orbitron">
+    <link rel="stylesheet" href="styles/logo.css">
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.1/jszip.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.js"></script>
+    
+
+</head>
+<body>
+
+    <div id="main">
+        <div id="wrapper">
+            <div id="logo-con" >
+                <div id="logo">
+                    <a href="https://apollo-xy.github.io"><h2>Apollo<span>XY</span></h2> </a>
+                    
+                </div> 
+                <h2>Image Compressor</h2>
+            </div>
+            <div id="choose-con">
+                <p id="tt1">Compress <b>JPG</b>, <b>PNG</b> or <b>GIF</b> with the best quality and compression.</p>
+                    <label class="button-3d">
+                        <input type="file" id="fileInput" accept="image/*" multiple >
+                        Upload Images 📤
+                    </label>
+                    <p> <span id="total-img">0</span> image(s) selected</p>
+
+                    <div id="holder">
+                        <a>Drag and drop images here</a><br>
+                        <a>or</a><br>
+                        <a>Use Ctrl + V to paste image</a>
+                    </div> 
+              
+                    <div id="com">Compress Images ⚡</div>
+
+                    <p id="status"></p>
+                    <progress id="progress" value="0" max="100">  </progress>
+                  
+                    <div id="ple">
+                        <a>Please be patient.</a>
+                        <a>Respond time depends on your browser.</a>
+                    </div>
+                    <a id="dwZip">Download ZIP 📥</a>
+                   
+            </div>
+            <div id="out-main">
+                <!-- <div id="out">
+                
+                    <img src="Apologo.png" >
+                    <p>Apologo.png</p>
+                    <p>4023kb ➤ 160kb</p>
+                    <br>
+                    <button>Download</button>
+                    <button id="remove">❌</button>
+                </div>
+                <div id="out">
+                    <img src="172505761_482544479854403_619892119662937860_n.jpg" >
+                    <p>172505761_482544479854403_619892119662937860_n.jpg</p>
+                    <br>
+                    <button>Download</button>
+                </div>
+                <div id="out">
+                    <img src="Apologo.png" >
+                    <br>
+                    <button>Download</button>
+                    <button id='remove' onclick='remov(this)'>❌</button>
+                </div> -->
+            </div>
+
+        </div>
+        <div id="footer">
+            <div id="con-footer">
+              <p>Made with❤️by Atharva</p>
+              <p>ApolloXY © 2021</p>
+              <div id="con-legal">
+                <a href="/disclaimer">Disclaimer</a>
+                <a>|</a>
+                <a href="/terms">Terms</a>
+                <a>|</a>
+                <a href="/privacy">Privacy</a>
+                <a>|</a>
+                <a href="/about">About</a>
+                <a>|</a>
+                <a href="/faq">FAQ</a>
+                <a>|</a>
+                <a href="/contact">Contact</a>
+                
+              </div>
+              <div id="google_translate_element"></div>
+                <a title="ApolloXY's Facebook page" href="https://www.facebook.com/apolloxy.git"><img src="https://img.icons8.com/android/26/ffffff/facebook.png"></a>
+                <a title="ApolloXY's Twitter page" href="https://twitter.com/xy_apollo"><img src="https://img.icons8.com/android/26/ffffff/twitter.png"/></a>
+                <a title="ApolloXY's Instagram page" href="https://www.instagram.com/apolloxy.git/"><img src="https://img.icons8.com/android/26/ffffff/instagram.png"/></a>
+                <a title="ApolloXY's Youtube page" href="https://www.youtube.com/channel/UCJQ7ZWXIbAqN9qyJEJgPG8A"><img src="https://img.icons8.com/material-sharp/30/ffffff/youtube-play.png"/></a>
+             
+            </div>
+          </div>
+        </div>
+    </div>
+</body>
+<script src="scripts/scripts.js"></script>
+<script src="scripts/copy.js"></script>
+<script src="scripts/drag.js"></script>
+</html>
