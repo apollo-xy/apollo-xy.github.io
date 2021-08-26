@@ -1,0 +1,248 @@
+*{
+    padding: 0;
+    margin: 0;
+
+}
+    
+html{
+    height: 100%;
+    scroll-behavior: smooth;
+}
+body {
+height: 100%;
+    font-family: "Lato", sans-serif;
+
+    overflow-y:scroll;
+
+
+}
+#main{
+    height: 100%;
+
+
+    position: relative;
+}
+#wrapper{
+    position:relative;
+    background: linear-gradient(to top right, #00ffff 0%, #9999ff 100%);
+  min-height: 70%;
+
+    padding: 20px;
+
+}
+
+#choose-con{
+    margin: 20px auto;
+    padding: 40px 0px;
+    background-color: rgb(243, 243, 243);
+    border: 2px solid rgb(170, 170, 170);
+    width: 290px;
+    border-radius: 15px;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+
+#fileInput{
+    display: none;
+}
+.file-upload {
+    background-color: rgb(93, 255, 141);
+    border: 2px solid rgb(170, 170, 170);
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+
+#choose-con p {
+    padding: 10px 20px ;
+}
+
+#choose-con #com{
+
+    position:relative;
+    display: none;
+    width: auto;
+    color:#ecf0f1;
+    text-decoration:none;
+    border-radius:5px;
+    border:solid 1px #f39c12;
+    background:#e77e23;
+    text-align:center;
+    padding:8px 10px 6px;
+    margin: 5px;
+    font-weight: bold;
+    user-select: none;
+
+    transition: all 0.1s;
+  
+    box-shadow: 0px 6px 0px rgb(211, 84, 0);
+  }
+#choose-con #com:active{
+    -webkit-box-shadow: 0px 2px 0px #d35400;
+    -moz-box-shadow: 0px 2px 0px #d35400;
+    box-shadow: 0px 2px 0px #d35400;
+    position:relative;
+    top:4px;
+}
+#choose-con #dwZip{
+
+    position:relative;
+    display: none;
+    width: auto;
+    color:#ecf0f1;
+    text-decoration:none;
+    border-radius:5px;
+    border:solid 1px #f39c12;
+    background:#e77e23;
+    text-align:center;
+    padding:8px 10px 6px;
+    margin: 5px;
+    font-weight: bold;
+    user-select: none;
+
+    transition: all 0.1s;
+  
+    box-shadow: 0px 6px 0px rgb(211, 84, 0);
+  }
+#choose-con #dwZip:active{
+    -webkit-box-shadow: 0px 2px 0px #d35400;
+    -moz-box-shadow: 0px 2px 0px #d35400;
+    box-shadow: 0px 2px 0px #d35400;
+    position:relative;
+    top:4px;
+}
+#choose-con .button-3d {
+    position:relative;
+    display: inline-block;
+    width: auto;
+    color:#ecf0f1;
+    text-decoration:none;
+    border-radius:5px;
+    border:solid 1px #f39c12;
+    background:#e77e23;
+    text-align:center;
+    padding:8px 10px 6px;
+    margin: 5px;
+    font-weight: bold;
+    user-select: none;
+
+    transition: all 0.1s;
+  
+    box-shadow: 0px 6px 0px rgb(211, 84, 0);
+  }
+#choose-con .button-3d:active{
+    -webkit-box-shadow: 0px 2px 0px #d35400;
+    -moz-box-shadow: 0px 2px 0px #d35400;
+    box-shadow: 0px 2px 0px #d35400;
+    position:relative;
+    top:4px;
+}
+#progress{
+    display: none;
+}
+
+#out{
+
+    margin: 20px auto;
+    padding: 40px 15px;
+    border: 2px solid rgb(170, 170, 170);
+
+    background-color: rgb(243, 243, 243);
+    width: 260px;
+    
+    border-radius: 15px;
+    text-align: center;
+}
+#out img{
+    width: 230px;
+}
+#out button{
+  
+    width: 150px;
+    font-size: 22px;
+    border: 2px solid rgb(170, 170, 170);
+    background-color: rgb(255, 230, 0);
+    color: rgb(37, 37, 37);
+    padding: 8px 3px;
+    border-radius: 15px;
+    cursor: pointer;
+    user-select: none;
+    
+
+}
+#out button:hover{
+    background-color: rgb(123, 255, 15);
+}
+#out p {
+    font-size: 20px;
+    margin: 10px;
+    word-wrap: break-word;
+}
+
+#out #remove{
+    width: min-content;
+    font-size: 17px;
+    padding: 10px 8px;
+}
+#ple{
+    display: none;
+}
+
+#footer{
+    width: 100%;
+  
+    background-color: #347bff;
+  
+  }
+  #con-footer{
+    padding: 30px;
+    text-align: center;
+    font-size: 20px;
+    color: #fff;
+  
+   
+  }
+  
+  #con-footer #con-legal{
+  
+    margin: 20px auto;
+    max-width: max-content;
+    padding: 2px 20px;
+    background-color: rgba(0, 0, 255, 0.301);
+    border-radius: 10px;
+  
+  }
+  #con-footer  a{
+    color:white;
+    font-size: 16px;
+    text-decoration: none;
+    padding: 0 3px;
+  }
+  #con-footer #con-legal a:hover{
+    color: yellow;
+    transition: 0.3s;
+  }
+
+  #holder {
+    border: 5px dashed #ccc;
+    user-select: none;
+
+    margin: 10px 30px;
+    text-align: center;
+    padding: 20px 0px;
+  }
+  
+  #holder.hover {
+    border: 10px dashed #0c0;
+  }
+  
+  #holder img {
+      width: 130px;
+    display: block;
+    margin: 10px auto;
+  }
+  #holder a{
+font-size: 15px;
+color: rgb(122, 122, 122);
+  }
