@@ -1,6 +1,9 @@
 window.addEventListener('paste', (event)=>{
   var items = (event.clipboardData || event.originalEvent.clipboardData).items; 
   for(var i=0; i<items.length; i++){
+
+    if (items[i].type.indexOf("image") == -1) continue;
+    window.scrollTo(0,document.body.scrollHeight);
     var blob = items[i].getAsFile();
     var reader = new FileReader();
     reader.fileName = "image_"+i+new Date().getTime();
