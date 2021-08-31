@@ -191,5 +191,6 @@ function topFunction() {
 
   window.onbeforeunload = confirmExit;
   function confirmExit() {
+        if(document.getElementById("out-main").childElementCount == 0){ return;}
       return "You have attempted to leave this page. Are you sure?";
   }
