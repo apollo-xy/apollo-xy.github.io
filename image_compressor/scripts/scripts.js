@@ -209,7 +209,7 @@ function compress(){
             setTimeout(function() {
           //  pdf.deletePage(pdf.internal.getNumberOfPages())
           pdf.deletePage(1)
-              pdf.save("test.pdf");
+              pdf.save("Compressed_Images_ApolloXY.pdf");
             }, 100);
           }
        
