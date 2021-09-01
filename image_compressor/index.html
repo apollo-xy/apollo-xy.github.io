@@ -34,17 +34,16 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.1/jszip.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.js"></script>
-    
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.4.1/jspdf.debug.js"></script>
+ 
 </head>
 <body>
 
     <div id="main">
-        
         <button onclick="topFunction()" id="top-btn" title="Go to top">
-        <img src="https://img.icons8.com/external-those-icons-fill-those-icons/2x/external-up-arrows-those-icons-fill-those-icons-9.png" alt="xx" height="30">
+        <img src="https://img.icons8.com/external-those-icons-fill-those-icons/2x/external-up-arrows-those-icons-fill-those-icons-9.png" alt="top" height="30">
         </button>
-        
+
         <div id="wrapper">
             <div id="logo-con" >
                 <div id="logo">
@@ -77,33 +76,16 @@
                         <a>Respond time depends on your browser.</a>
                     </div>
                     <a id="dwZip">Download ZIP 📥</a>
-                   
+                    <a id="dwPDF">Export PDF 📥</a>
+                    <br>
+                    <progress id="progressPDF" value="0" max="100">  </progress>
+
             </div>
-            <div id="out-main">
-                <!-- <div id="out">
-                
-                    <img src="Apologo.png" >
-                    <p>Apologo.png</p>
-                    <p>4023kb ➤ 160kb</p>
-                    <br>
-                    <button>Download</button>
-                    <button id="remove">❌</button>
-                </div>
-                <div id="out">
-                    <img src="172505761_482544479854403_619892119662937860_n.jpg" >
-                    <p>172505761_482544479854403_619892119662937860_n.jpg</p>
-                    <br>
-                    <button>Download</button>
-                </div>
-                <div id="out">
-                    <img src="Apologo.png" >
-                    <br>
-                    <button>Download</button>
-                    <button id='remove' onclick='remov(this)'>❌</button>
-                </div> -->
-            </div>
+            <div id="out-main"></div>
+           
 
         </div>
+        
         <div id="footer">
             <div id="con-footer">
               <p>Made with❤️by Atharva</p>
