@@ -12,9 +12,10 @@ window.addEventListener('paste', (event)=>{
         
     compressImg(event.target.result, function(result){
       document.getElementById("dwZip").style.display = "inline-block";
+      document.getElementById("dwPDF").style.display = "inline-block";
 
       var div = document.createElement("div");
-      div.innerHTML = "<div id='out'><img src='" +  result.url + "'/><p>" + event.target.fileName + ".png</p><p>" + result.oSize+"kb ➤ "+ result.cSize +"kb</p><br>" + "<button onclick='dL(this);'" + "fname='" + event.target.fileName + "' url='" + result.url + "'>Download</button><button id='remove' onclick='reMov(this);' fname='ApolloXY-"+ event.target.fileName  +".png'>❌</button>" +"</div>";
+      div.innerHTML = "<div id='out'><img src='" + 'data:image/webp;base64,'+ result.base64 + "'/><p>" + event.target.fileName + ".png</p><p>" + result.oSize+"kb ➤ "+ result.cSize +"kb</p><br>" + "<button onclick='dL(this);'" + "fname='" + event.target.fileName + "' url='" + result.url + "'>Download</button><button id='remove' onclick='reMov(this);' fname='ApolloXY-"+ event.target.fileName  +".png'>❌</button>" +"</div>";
       document.getElementById("out-main").insertBefore(div, null);
       zip.folder("images").file("ApolloXY-"+event.target.fileName+".png", result.base64, {base64: true});
        
