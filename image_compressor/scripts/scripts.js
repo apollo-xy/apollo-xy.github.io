@@ -10,14 +10,15 @@ document.querySelector("#fileInput").addEventListener("change", function(e){
         document.getElementById("com").style.display = "inline-block";
         document.getElementById('status').innerHTML = "Status: Computing";
         document.getElementById("progress").style.display = "inline-block";
+        
     }
     for (var i = 0; i < files.length; i++){
         var file = files[i];
         const reader = new FileReader();
         reader.readAsDataURL(file);  
         reader.onloadend = function () {
-            document.getElementById('status').innerHTML = "Status: Ready to Compress";
-            document.getElementById("progress").value = "0";
+          document.getElementById('status').innerHTML = "Status: Ready to Compress";
+          document.getElementById("progress").value = "0";
           };
     }
 
@@ -26,15 +27,16 @@ document.querySelector("#fileInput").addEventListener("change", function(e){
 
 document.getElementById('com').addEventListener("click", compress);
 document.getElementById('dwZip').addEventListener("click", saveALL);
+document.getElementById('dwPDF').addEventListener("click", savePDF);
 
 var zip = new JSZip();
+
 
 function compressImg(base64, callback){
 
     const img = new Image();
     img.src = base64;
 
-    
     img.onload = () => {
     const width = img.width;
     const height = img.height;
@@ -65,7 +67,8 @@ function compressImg(base64, callback){
     }
 
     const blobUrl = URL.createObjectURL(b64toBlob(webp));
-    webp = webp.replace("data:image/webp;base64,", "");
+
+     webp = webp.replace("data:image/webp;base64,", "");
         var res = {
             base64:webp,
             url:blobUrl,
@@ -100,10 +103,6 @@ function compress(){
 
         const reader = new FileReader();
         reader.readAsDataURL(file);  
-        //var ffname =  files[i].name.split(".")[0];
-        //console.log(i);
-       // var ffname =  file.name;
-       // console.log(file.name);
        var aa = 0;
         reader.fileName = file.name.split(".")[0];
         reader.onload = event => {
@@ -120,32 +119,23 @@ function compress(){
                 document.getElementById('total-img').innerHTML = files.length;
                 document.getElementById('status').innerHTML = "Status: Done!";
                 document.getElementById("dwZip").style.display = "inline-block";
-            }
+                document.getElementById("dwPDF").style.display = "inline-block";
+              
+             }
 
 
             var div = document.createElement("div");
             div.innerHTML = "<div id='out'><img src='" +  result.url + "'/><p>" + event.target.fileName + ".png</p><p>" + result.oSize+"kb ➤ "+ result.cSize +"kb</p><br>" + "<button onclick='dL(this);'" + "fname='" + event.target.fileName + "' url='" + result.url + "'>Download</button><button id='remove' onclick='reMov(this);' fname='ApolloXY-"+ event.target.fileName  +".png'>❌</button>" +"</div>";
             document.getElementById("out-main").insertBefore(div, null);
             zip.folder("images").file("ApolloXY-"+event.target.fileName+".png", result.base64, {base64: true});
-           
-                
+                      
             });
 
-        }
-        
-
-        reader.onerror = error => console.error(error);
-  
+        }  
     }
 
 }
-function download(){
-    filename = document.getElementById('filename').value;
-    var link = document.createElement('a');
-    link.download = filename + '.png';
-    link.href = document.querySelector("img.after").src;
-    link.click();
-  }
+
   function dL(self){
    var Fnam  = self.getAttribute("fname");
    var url  = self.getAttribute("url");
@@ -170,6 +160,66 @@ function download(){
     });
   }
 
+
+  function savePDF(){
+    document.getElementById("progressPDF").style.display = "inline-block";
+    var count = 0;
+    document.getElementById('progressPDF').value = count;
+    var outCons = document.querySelectorAll('#out img');
+    var pdf = new jsPDF();
+    document.getElementById('progressPDF').max = outCons.length;
+
+    for (var j = 0; j < outCons.length; j++) {
+
+      const img = new Image();
+      img.src =  outCons[j].src ;
+           
+      img.onload = (function(imga) {
+          return function() {
+          count++;
+          document.getElementById('progressPDF').value = count;
+
+          const width = imga.width;
+          const height = imga.height;
+
+          const elem = document.createElement("canvas");
+          elem.width = width;
+          elem.height = height;
+          const ctx = elem.getContext('2d');
+          ctx.drawImage(imga, 0, 0, width, height);
+          var png = ctx.canvas.toDataURL("image/pmg");
+   
+          if((width/height)>1.15){
+            pdf.addPage([160, 90], "l");
+            pdf.setPage(j + 1);
+            pdf.addImage(png, 'PNG', 0, 0, 160, 90);
+    
+          }if((width/height)<0.85){
+            pdf.addPage([160, 213.33], "p");
+            pdf.setPage(j + 1);
+            pdf.addImage(png, 'PNG', 0, 0, 160, 213.33);
+          }
+          if((width/height)>0.85 && (width/height)<1.15){
+            pdf.addPage([160, 160], "p");
+            pdf.setPage(j + 1);
+            pdf.addImage(png, 'PNG', 0, 0, 160, 160);
+          }
+
+          if (count === outCons.length) {
+            setTimeout(function() {
+          //  pdf.deletePage(pdf.internal.getNumberOfPages())
+          pdf.deletePage(1)
+              pdf.save("test.pdf");
+            }, 100);
+          }
+       
+        }
+      })(img);
+          
+    }
+
+  }
+
   var topBtn = document.getElementById("top-btn");
 
 // When the user scrolls down 20px from the top of the document, show the button
@@ -183,14 +233,15 @@ function scrollFunction() {
   }
 }
 
-// When the user clicks on the button, scroll to the top of the document
 function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
 
-  window.onbeforeunload = confirmExit;
+window.onbeforeunload = confirmExit;
   function confirmExit() {
-        if(document.getElementById("out-main").childElementCount == 0){ return;}
+    
+    if(document.getElementById("out-main").childElementCount == 0){ return;}
       return "You have attempted to leave this page. Are you sure?";
+
   }
