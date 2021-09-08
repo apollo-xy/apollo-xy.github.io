@@ -78,13 +78,17 @@ height: 100%;
 }
 #r-con{
     text-align: center;
-    font-weight: bold;
     font-size: 18px;
 }
 #r-con input{
     font-size: 22px;
     padding: 5px;
     max-width: 80%;
+    margin: 20px 0;
+}
+#r-con input::placeholder{
+    font-size: 20px;
+text-align: center;
 }
 #table-con{
     display: flex;
