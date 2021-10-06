@@ -24,6 +24,7 @@ next1.addEventListener("click", ()=>{
     document.getElementById('con3').style.display = "none";
     document.getElementById('con4').style.display = "block";
     Sname = document.getElementById("space-name").value;
+    document.getElementById("space-name2").value = Sname;
 
     document.getElementById('sname').innerHTML = Sname;
     document.getElementById('sname2').innerHTML = Sname;
