@@ -1,4 +1,4 @@
-//v1
+//v2
 const tosBut = document.querySelector(".con1-foot button");
 const sendBut = document.querySelector("#send-but");
 const pre1 = document.querySelector("#pre1");
@@ -294,9 +294,9 @@ function done(){
   document.getElementById('con6').style.display = "block";
 
   var strr = window.location.href;
-  strr = strr.substring(0, strr.lastIndexOf("/FileTransfer"));
+  strr = strr.substring(0, strr.lastIndexOf("/"));
   
-  document.getElementById("space-link-box").value = strr +"?r=" + encodeURI(document.getElementById("space-name").value);
+  document.getElementById("space-link-box").value = strr +"/FileTransfer?r=" + encodeURI(document.getElementById("space-name").value);
 
 }
 function copyLink(){
