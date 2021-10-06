@@ -1,4 +1,4 @@
-//v2
+//v3
 const tosBut = document.querySelector(".con1-foot button");
 const sendBut = document.querySelector("#send-but");
 const pre1 = document.querySelector("#pre1");
@@ -288,7 +288,7 @@ function done(){
   document.getElementById('tf').innerHTML = 0;
   document.getElementById('ts').innerHTML = 0;
 
-  window.history.pushState("/", "", "/FileTransfer");
+  window.history.pushState("/", "", "/");
 
   document.getElementById('con5').style.display = "none";
   document.getElementById('con6').style.display = "block";
@@ -315,8 +315,4 @@ function copyLink(){
   document.getElementById('con6').style.display = "none";
   document.getElementById('con2').style.display = "block";
  }
-
-
- //fetchText("https://res.cloudinary.com/apollo-xy/raw/upload/v1633322613/pub_img/ty_nvmhdl.txt");
-// fetchText("https://res.cloudinary.com/apollo-xy/raw/upload/v1633323729/pub_img/ty_lth672.txt")
 
