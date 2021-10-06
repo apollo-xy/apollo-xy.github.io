@@ -1,4 +1,4 @@
-//v4
+//v5
 const tosBut = document.querySelector(".con1-foot button");
 const sendBut = document.querySelector("#send-but");
 const pre1 = document.querySelector("#pre1");
@@ -27,7 +27,7 @@ next1.addEventListener("click", ()=>{
 
     document.getElementById('sname').innerHTML = Sname;
     document.getElementById('sname2').innerHTML = Sname;
-    window.history.pushState("/", "", "FileTransfer/?s="+encodeURI(Sname));
+    window.history.pushState("/", "", "/?s="+encodeURI(Sname));
     sessionStorage.setItem("sname", Sname);
 
 });
