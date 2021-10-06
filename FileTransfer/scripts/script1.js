@@ -1,4 +1,4 @@
-//v3
+//v4
 const tosBut = document.querySelector(".con1-foot button");
 const sendBut = document.querySelector("#send-but");
 const pre1 = document.querySelector("#pre1");
@@ -187,7 +187,7 @@ function upload(){
 }
 
   var input = document.getElementById('file');
-   if(input.files.length===0){return;}
+ if(input.files.length===0  || totalFiles ===0){return;}
   document.getElementById('con4').style.display = "none";
   document.getElementById('con5').style.display = "block";
 
