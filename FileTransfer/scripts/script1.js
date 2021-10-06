@@ -1,4 +1,4 @@
-//v3
+//v4
 const tosBut = document.querySelector(".con1-foot button");
 const sendBut = document.querySelector("#send-but");
 const pre1 = document.querySelector("#pre1");
@@ -27,9 +27,7 @@ next1.addEventListener("click", ()=>{
 
     document.getElementById('sname').innerHTML = Sname;
     document.getElementById('sname2').innerHTML = Sname;
-
-    window.history.pushState("https://apollo-xy.github.io", "", "FileTransfer/?s="+encodeURI(Sname));
-    
+    window.history.pushState("/", "", "FileTransfer/?s="+encodeURI(Sname));
     sessionStorage.setItem("sname", Sname);
 
 });
@@ -288,7 +286,7 @@ function done(){
   document.getElementById('tf').innerHTML = 0;
   document.getElementById('ts').innerHTML = 0;
 
-  window.history.pushState("/", "", "/");
+  window.history.pushState("/", "", "/FileTransfer");
 
   document.getElementById('con5').style.display = "none";
   document.getElementById('con6').style.display = "block";
@@ -315,4 +313,6 @@ function copyLink(){
   document.getElementById('con6').style.display = "none";
   document.getElementById('con2').style.display = "block";
  }
+
+
 
