@@ -130,9 +130,10 @@ $.getJSON('https://random-words-api.vercel.app/word').done (function(data) {
 })
 
 
-
   var totalFiles = 0;
+  var pp1 = 0, pp2 = 0;
   updateList = function() {
+  
 
     var input = document.getElementById('file');
     var output = document.getElementById('fileList');
@@ -141,12 +142,17 @@ $.getJSON('https://random-words-api.vercel.app/word').done (function(data) {
     if(input.files.length===0){return;}
     for (var i = 0; i < input.files.length; ++i) {
 
-       children +=  '<li>'+ input.files[i].name + '</li>'
+       children +=  '<li>'+ input.files[i].name + '</li>';
+       
        totalSize += input.files[i].size;
 
         
     }
-    totalFiles += input.files.length;
+    pp1 = input.files.length;
+    totalFiles += pp1;
+    totalFiles = totalFiles - pp2;
+    pp2 = pp1;
+
     document.getElementById('tf').innerHTML = totalFiles;
     document.getElementById('ts').innerHTML = (totalSize/(1024*1024)).toFixed(4)+"Mb";
     output.innerHTML = children;
