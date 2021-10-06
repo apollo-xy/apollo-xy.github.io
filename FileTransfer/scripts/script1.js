@@ -1,4 +1,4 @@
-//v2
+//v3
 const tosBut = document.querySelector(".con1-foot button");
 const sendBut = document.querySelector("#send-but");
 const pre1 = document.querySelector("#pre1");
@@ -6,28 +6,30 @@ const next1 = document.querySelector("#next1");
 
 var Sname = "";
 tosBut.addEventListener("click", ()=>{
-document.getElementById('con1').style.display = "none";
-document.getElementById('con2').style.display = "block";
+  document.getElementById('con1').style.display = "none";
+  document.getElementById('con2').style.display = "block";
 });
 
 sendBut.addEventListener("click", ()=>{
   document.getElementById('con2').style.display = "none";
   document.getElementById('con3').style.display = "block";
-  });
+});
 
 pre1.addEventListener("click", ()=>{
   document.getElementById('con2').style.display = "block";
   document.getElementById('con3').style.display = "none";
-  });
+});
 next1.addEventListener("click", ()=>{
     if(document.getElementById("space-name").value === ''){return}
     document.getElementById('con3').style.display = "none";
     document.getElementById('con4').style.display = "block";
     Sname = document.getElementById("space-name").value;
     document.getElementById("space-name2").value = Sname;
+    
 
     document.getElementById('sname').innerHTML = Sname;
     document.getElementById('sname2').innerHTML = Sname;
+
     window.history.pushState("/", "", "/FileTransfer/?s="+encodeURI(Sname));
     sessionStorage.setItem("sname", Sname);
 
@@ -65,15 +67,7 @@ if(url.search.includes("?r=")){
 
   firebase.database().ref("FileTransfer/"+Sname).on("child_added", function (snapshot) {
     var html = "";
-    // give each message a unique ID
-           // show delete button if message is sent by me
-    // if (snapshot.val().sender == myName) {
-    //     html += "<button data-id='" + snapshot.key + "' onclick='deleteMessage(this);'>";
-    //         html += "Delete";
-    //     html += "</button>";
-    // }
     var type = snapshot.val().type
-
         fetch(snapshot.val().url)
             .then(function(response) {
                 response.text().then(function(text) {
@@ -142,20 +136,23 @@ $.getJSON('https://random-words-api.vercel.app/word').done (function(data) {
     var children = "";
     var totalSize = 0;
     if(input.files.length===0){return;}
+    totalFiles = input.files.length;
     for (var i = 0; i < input.files.length; ++i) {
 
-       children +=  '<li>'+ input.files[i].name + '</li>';
-       
-       totalSize += input.files[i].size;
-//        const validImageTypes = ['image/gif', 'image/jpeg', 'image/png'];
-//       if (!validImageTypes.includes(input.files[i].type)) {
-// alert("Wrong");
-// return;
-//       }
+ 
+       var ttype  = input.files[i].type;
+       if (ttype.indexOf('image') !== -1 || ttype.indexOf('video') !== -1) {
+        children +=  '<li>'+ input.files[i].name + '</li>';
+        totalSize += input.files[i].size;
+      } else {
+        children +=  '<li>Unsupported File</li>';
+        totalFiles -= 1;
+        console.log('Unsupported file');
+      }
 
         
     }
-    totalFiles = input.files.length;
+
 
 
     document.getElementById('tf').innerHTML = totalFiles;
@@ -197,7 +194,14 @@ function upload(){
 
   
   for (var i = 0; i < input.files.length; ++i) {
-    uploadFile(input.files[i]);
+
+    var ttype  = input.files[i].type;
+    if (ttype.indexOf('image') !== -1 || ttype.indexOf('video') !== -1) {
+      uploadFile(input.files[i]);
+   } else {
+
+     console.log('Unsupported files Not uploaded');
+   }
     
   }
 
@@ -233,10 +237,6 @@ function uploadFile(file) {
   });
 
   xhr.onreadystatechange = function(e) {
-//     if (xhr.readyState == 0 ||xhr.status == 413) {
-// console.log("Limit Exceed!")
-
-//     }
     if (xhr.readyState == 4 && xhr.status == 200) {
       j = j + 1;
       document.getElementById('proF').value = j;
@@ -250,9 +250,6 @@ function uploadFile(file) {
       // File uploaded successfully
       var response = JSON.parse(xhr.responseText);
       console.log(response.secure_url);
-      //secure_url
-      //resource_type
-      // https://res.cloudinary.com/cloudName/image/upload/v1483481128/public_id.jpg
       var url = response.secure_url;
       var res_type = response.resource_type;
 
@@ -312,17 +309,11 @@ function done(){
 }
 function copyLink(){
   var copyText = document.getElementById("space-link-box");
-    /* Select the text field */
-    copyText.select();
-    copyText.setSelectionRange(0, 99999); /* For mobile devices */
-  
-     /* Copy the text inside the text field */
-    navigator.clipboard.writeText(copyText.value);
-
-    document.getElementById("copy").innerHTML = "Copied";
-
-
- }
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); /* For mobile devices */
+  navigator.clipboard.writeText(copyText.value);
+  document.getElementById("copy").innerHTML = "Copied";
+}
 
  function back2(){
   document.getElementById('con6').style.display = "none";
