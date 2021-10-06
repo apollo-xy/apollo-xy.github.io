@@ -27,7 +27,7 @@ next1.addEventListener("click", ()=>{
     document.getElementById('sname').innerHTML = Sname;
     document.getElementById('sname2').innerHTML = Sname;
 
-    window.history.pushState("/", "", "FileTransfer/?s="+encodeURI(Sname));
+    window.history.pushState("https://apollo-xy.github.io", "", "FileTransfer/?s="+encodeURI(Sname));
     
     sessionStorage.setItem("sname", Sname);
 
@@ -293,7 +293,7 @@ function done(){
   document.getElementById('con6').style.display = "block";
 
   var strr = window.location.href;
-  strr = strr.substring(0, strr.lastIndexOf("/"));
+  strr = strr.substring(0, strr.lastIndexOf("/FileTransfer"));
   
   document.getElementById("space-link-box").value = strr +"?r=" + encodeURI(document.getElementById("space-name").value);
 
