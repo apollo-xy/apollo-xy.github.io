@@ -57,6 +57,8 @@ next2.addEventListener("click", ()=>{
         document.getElementById('con9').style.display = "block";
 
         Sname =  document.getElementById("space-name2").value;
+          document.getElementById("space-name").value = Sname;
+  
         window.history.pushState("/", "", "FileTransfer/?r="+encodeURI(Sname));
 
         document.getElementById('sname').innerHTML = Sname;
