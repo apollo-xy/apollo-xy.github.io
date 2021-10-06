@@ -1,0 +1,25 @@
+#con1{
+display: none;
+padding: 0px
+}
+#con1 img{
+  width: 70px;
+  margin-bottom: 10px;
+
+}
+.con1-head{
+  font-size: 20px;
+  padding: 20px 30px ;
+}
+.con1-para{
+  font-size: 18px;
+  padding:  10px 30px 20px;
+}
+.con1-foot{
+  border-top: 2px rgb(143, 143, 143) solid;
+  display: flex;
+  height: 15vh;
+  align-items: center;
+  justify-content: center;
+
+}

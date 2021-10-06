@@ -1,0 +1,33 @@
+#con3{
+    padding: 0px;
+  display: none;
+
+    }
+#con3 img{
+    width: 70px;
+    margin-bottom: 10px;
+
+}
+.con3-head{
+    font-size: 20px;
+    padding: 20px 30px ;
+}
+.con3-para{
+    font-size: 18px;
+    padding:  10px 30px 20px;
+  }
+.con3-foot{
+    border-top: 2px rgb(143, 143, 143) solid;
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  
+}
+#space-name{
+  margin: 5px 0;
+  padding: 5px ;
+  font-size: 18px;
+  width: 90%;
+}

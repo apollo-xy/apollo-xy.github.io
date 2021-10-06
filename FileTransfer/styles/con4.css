@@ -1,0 +1,97 @@
+#con4{
+    padding: 0px;
+  display: none;
+
+    }
+#con4 #con4img{
+    width: 70px;
+    margin-bottom: 10px;
+
+}
+.con4-head{
+    font-size: 20px;
+    padding: 20px 30px ;
+}
+.con4-para{
+    font-size: 18px;
+    padding:  10px 30px 20px;
+  }
+.con4-foot{
+  border-top: 2px rgb(143, 143, 143) solid;
+  padding: 20px 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.custom-file{
+    position:relative;
+    font-family:arial;
+    overflow:hidden;
+    margin-bottom:10px;
+    width: auto;
+    display: inline-block;
+    padding: 10px;
+  }
+  .custom-file-input{
+    position:absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    cursor:pointer;
+    opacity:0;
+    z-index:100;
+  }
+  .custom-file img{
+    display:inline-block;
+    vertical-align:middle;
+    margin-right:5px;
+    width: 20px;
+  }
+ .file-list {
+    font-family:arial;
+    list-style: none;
+    padding:0;
+  }
+  .file-list li{
+
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+
+
+    border-bottom:1px solid #ddd;
+    margin: 10px 0;
+    padding:5px;
+
+  }
+  .sname-con{
+    background-color: rgb(0, 119, 255);
+    color: #fff;
+    padding: 10px;
+    font-size: 35px;
+  }
+  #sname{
+    word-wrap: break-word;
+
+
+  }
+#text-box{
+
+  max-width: 90%;
+  min-width: 90%;
+  min-height: 100px;
+  font-size: 18px;
+  padding: 7px;
+  font-family: "Lato", sans-serif;
+  border: 2px solid #0059ff;
+  border-radius: 5px;
+}
+#text-box:focus{
+  outline: none !important;
+    
+    box-shadow: 0px 0px 2px #0059ff;
+}
