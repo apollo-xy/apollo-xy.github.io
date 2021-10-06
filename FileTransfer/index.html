@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>FileTransfer · ApolloXY</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Ct ompatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#4285f4">
+    <meta name="author" content="Atharva">
+    <meta name="application-name" content="ApolloXY">
+    <meta name="keywords" content="FileTransfer, File Transfer, share, apollo-xy FileTransfer, Apollo-XY FileTransfer, apolloxy.git, apollo_xy, xy_apollo">
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="FileTransfer · ApolloXY" />
+    <meta property="og:site_name" content="ApolloXY" />
+    <meta property="og:description" content="Connect and share your images, videos and many more around the world." />
+    <meta property="og:url" content="https://apollo-xy.github.io/FileTransfer" />
+    <meta property="og:image" content="https://apollo-xy.github.io/icon/banner1.jpg">
+    <meta name="google-site-verification" content="fCkhRT1ISeBuBGZO3EyZxE3AEYk5jq3-sSyhzY-ZJYg" />
+    <meta http-equiv="origin-trial" content="AjvG5dh8QCVXMPAxrjL+6awzYG16b2rYiLwFoBfwm9wPsLVYNJP9Zh3haq/ajd+CHg5VkIWN6dwz87uh0FJ+AQQAAABzeyJvcmlnaW4iOiJodHRwczovL2Fwb2xsby14eS5naXRodWIuaW86NDQzIiwiZmVhdHVyZSI6IldlYkFwcExpbmtDYXB0dXJpbmciLCJleHBpcnkiOjE2MzQwODMxOTksImlzU3ViZG9tYWluIjp0cnVlfQ==">
+
+    <link rel="stylesheet" href="styles/style1.css">
+    <link rel="stylesheet" href="styles/con1.css">
+    <link rel="stylesheet" href="styles/con2.css">
+    <link rel="stylesheet" href="styles/con3.css">
+    <link rel="stylesheet" href="styles/con4.css">
+    <link rel="stylesheet" href="styles/con5.css">
+    <!-- <link rel="stylesheet" href="styles/con6.css"> -->
+    <link rel="stylesheet" href="styles/con7.css">
+    <link rel="stylesheet" href="styles/con9.css">
+    <link rel="stylesheet" href="styles/logo.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Orbitron">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-database.js"></script>
+
+
+    <link href="https://unpkg.com/cloudinary-video-player@1.5.5/dist/cld-video-player.min.css" rel="stylesheet">
+<script src="https://unpkg.com/cloudinary-core@latest/cloudinary-core-shrinkwrap.min.js" type="text/javascript"></script>
+<script src="https://unpkg.com/cloudinary-video-player@1.5.5/dist/cld-video-player.min.js" 
+    type="text/javascript"></script>
+
+</head>
+<body>
+    
+    <div id="main">
+    
+
+        <div class="header">
+            <div id="logo-con" >
+                <div id="logo">
+                    <a href="https://apollo-xy.github.io"><h1>Apollo<span>XY</span></h1> </a>
+                    
+                </div> 
+        
+            </div>
+        </div>
+
+        <div class="container">
+            <div id="con1">
+            
+                <div class="con1-head">
+                    <img src="img/logo.png" alt="">
+                    <h2>You're</h2>
+                    <h1>almost</h1><h2>there👍</h2>
+                </div>
+                <div class="con1-para">
+                    <p>To continue, please agree to our <a href="/terms#file_transfer">Terms of Service</a> .</p>
+                </div>
+                <div class="con1-foot">
+                    <button class="button-3d">I agree</button>
+                </div>
+                
+            </div>
+
+            <div id="con2">
+            
+                <div class="con2-head">
+                    <img src="img/logo.png" alt="">
+                    <h2>File</h2>
+                    <h1>Transfer</h1>
+                </div>
+                <div class="con1-para">
+                    <p>Connect your devices to share images and videos</p>
+                </div>
+                <div class="con2-foot">
+                    <button class="button-3d" id="send-but">Send</button> 
+                    <button class="button-3d" id="receive-but">Receive</button>                   
+                </div>
+                
+                
+            </div>
+            
+            <div id="con3">
+            
+                <div class="con3-head">
+                    <img src="img/logo.png" alt="">
+                    <h2>Create</h2>
+                    <h1>Space</h1>
+                </div>
+                <div class="con3-para">
+                    
+                    <p>Space Name:</p>
+                    <input type="text" name="space-name" id="space-name"  placeholder="(Required)">
+
+                </div>
+                <div class="con2-foot">
+                    <button class="button-3d" id="pre1">Previous</button> 
+                    <button class="button-3d" id="next1">Next</button> 
+                                
+                </div>
+                
+                
+            </div>
+
+            <div id="con4">
+            
+                <div class="con4-head">
+
+                    <img  id="con4img" src="img/logo.png" alt="" style="float: none;">
+                    <button class="button-3d" id="pre5" style="float: right;">Back</button> 
+                    <br>
+                    <h2>Upload</h2>
+                    <h1>Files</h1>
+                    <h2>to</h2>
+                    <div class="sname-con">
+                        <span id="sname"></span>
+                    </div> 
+                </div>
+                <div class="con4-para">
+
+                    <div class="custom-file">
+                        <input type="file" accept="image/*, video/*, text/plain"  class="custom-file-input" id="file" multiple onchange="updateList()">
+                        <label class="custom-file-label" for="file">
+                            <img width="30" src="https://image.flaticon.com/icons/svg/54/54565.svg" /> Upload Files here</label>
+                    </div>
+                    
+                    <textarea id="text-box" placeholder="Or Upload Text here" spellcheck="false"></textarea>
+                    <ul id="fileList" class="file-list"></ul>
+                    <i>Total Files: <span id="tf">0</span></i>
+                    <br>
+                    <i>Total Size: <span id="ts">0</span></i>
+                    <br>
+                    
+                </div>
+                <div class="con4-foot">
+                    
+                    <button class="button-3d" onclick="upload()">Transfer</button> 
+                                
+                </div>
+                
+                
+            </div>
+
+            <div id="con5">
+            
+                <div class="con5-head">
+                    <img src="img/logo.png" alt="">
+                    <h2>Files</h2>
+                    <h1>Uploading</h1>
+                </div>
+                <div class="con5-para">
+                    <p>Progress:</p>
+                    <progress id="progress" max="100" value="0"></progress>
+                    <p>Files Uploaded:</p>
+                    <progress id="proF" max="100" value="0"></progress>
+                </div>
+                <div class="con5-foot">
+                    <button class="button-3d" id="cancel">Cancel</button> 
+                                
+                </div>
+                
+                
+            </div>
+
+            <div id="con6">
+            
+                <div class="con6-head">
+                    <img src="img/logo.png" alt="">
+                    <h2>You're </h2>
+                    <h1>Done!</h1>
+                </div>
+                <div class="con6-para">
+                    <p>Copy your space link </p>
+                    <input type="text" id="space-link-box">
+                </div>
+                <div class="con6-foot">
+                    <button class="button-3d" id="copy" onclick="copyLink()">Copy</button> 
+                    <button class="button-3d" id="back2" onclick="back2()">Back</button> 
+                                
+                </div>
+                
+                
+            </div>
+
+            <div id="con7">
+            
+                <div class="con7-head">
+                    <img src="img/logo.png" alt="">
+                    <h2>Open</h2>
+                    <h1>Space</h1>
+                </div>
+                <div class="con7-para">
+                    
+                    <p>Space Name:</p>
+                    <input type="text"id="space-name2"  placeholder="(Required)">
+
+                </div>
+                <div class="con7-foot">
+                    <button class="button-3d" id="pre2">Previous</button> 
+                    <button class="button-3d" id="next2">Next</button> 
+                                
+                </div>
+                
+                
+            </div>
+
+            <div id="con8">
+            
+                <div class="con8-head">
+                    <img src="img/logo.png" alt="">
+                    <h2>Open</h2>
+                    <h1>Space</h1>
+                </div>
+                <div class="con8-para">
+                    
+                    <p>Space Password:</p>
+                    <input type="text"id="space-pwd"  placeholder="(Required)">
+
+                </div>
+                <div class="con8-foot">
+                    <button class="button-3d" id="pre3">Previous</button> 
+                    <button class="button-3d" id="next3">Next</button> 
+                                
+                </div>
+                
+                
+            </div>
+
+            <div id="con9">
+            
+                <div class="con9-head">
+                    <img  id="img" src="img/logo.png" alt="" style="float: none;">
+                    <button class="button-3d" id="pre4" style="float: right;">Back</button> 
+                    <br>
+    
+                    
+                    
+                    <h3>Space:</h3><br>
+  
+                    <div class="sname-con">
+                        <span id="sname2"></span>
+                    </div> 
+                    
+                    
+                </div>
+                <div id="items-con">
+                    <!-- <div class="item-c">
+                        <pre id="textOut"></pre>
+                        <button>Remove</button>
+                        <button>Copy Link</button>
+
+                    </div>
+                    
+                    <div class="item-c">
+                        <img src="/img/bg1.jpg" alt="">
+                        <button>Remove</button>
+                        <button>Copy Link</button>
+
+                    </div> -->
+                    
+    
+                </div>
+                
+                
+                
+            </div>
+
+        </div>
+        
+       
+    
+    </div>
+</body>
+<script src="scripts/script1.js" ></script>
+<script src="scripts/script2.js" ></script>
+<script src="scripts/script3.js" ></script>
+
+</html>
