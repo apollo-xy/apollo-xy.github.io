@@ -1,4 +1,4 @@
-//v1
+//v2
 const tosBut = document.querySelector(".con1-foot button");
 const sendBut = document.querySelector("#send-but");
 const pre1 = document.querySelector("#pre1");
@@ -96,7 +96,7 @@ if(url.search.includes("?r=")){
         
             }
             if(type === "video"){
-                html += "<div class='item-c' id='item" + snapshot.key + "'>";
+                html += "<div class='item-c' id='item-" + snapshot.key + "'>";
                 html += "<video src='" + snapshot.val().url + "' controls> </video>";
                 html += "<button item-id='" + snapshot.key + "' onclick='deleteItem(this);'>";
                 html += "Delete";
@@ -130,6 +130,7 @@ $.getJSON('https://random-words-api.vercel.app/word').done (function(data) {
 })
 
 
+
   var totalFiles = 0;
   var pp1 = 0, pp2 = 0;
   updateList = function() {
@@ -145,13 +146,16 @@ $.getJSON('https://random-words-api.vercel.app/word').done (function(data) {
        children +=  '<li>'+ input.files[i].name + '</li>';
        
        totalSize += input.files[i].size;
+//        const validImageTypes = ['image/gif', 'image/jpeg', 'image/png'];
+//       if (!validImageTypes.includes(input.files[i].type)) {
+// alert("Wrong");
+// return;
+//       }
 
         
     }
-    pp1 = input.files.length;
-    totalFiles += pp1;
-    totalFiles = totalFiles - pp2;
-    pp2 = pp1;
+    totalFiles = input.files.length;
+
 
     document.getElementById('tf').innerHTML = totalFiles;
     document.getElementById('ts').innerHTML = (totalSize/(1024*1024)).toFixed(4)+"Mb";
@@ -164,6 +168,7 @@ $("#text-box").on("change keyup paste", function() {
   if(textBox.value.trim().length >= 1){
     
     document.getElementById('tf').innerHTML = totalFiles+1;
+
   }else{
     document.getElementById('tf').innerHTML = totalFiles;
   }
@@ -235,6 +240,7 @@ function uploadFile(file) {
       j = j + 1;
       document.getElementById('proF').value = j;
       console.log(j)
+      console.log(totalFiles);
       if(j === totalFiles){
         done();
         console.log("done");
@@ -312,6 +318,8 @@ function copyLink(){
      /* Copy the text inside the text field */
     navigator.clipboard.writeText(copyText.value);
 
+    document.getElementById("copy").innerHTML = "Copied";
+
 
  }
 
@@ -319,6 +327,3 @@ function copyLink(){
   document.getElementById('con6').style.display = "none";
   document.getElementById('con2').style.display = "block";
  }
-
-
-
