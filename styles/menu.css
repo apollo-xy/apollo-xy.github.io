@@ -1,0 +1,250 @@
+
+  #label{
+    display:flex;
+    flex-direction:column;
+    width:50px;
+    cursor:pointer;
+    margin: 15px;
+    float: left;
+    z-index: 1002;
+position: absolute;
+  
+ 
+   }
+   
+   #label span{
+     background: #39FF14;
+     border-radius:10px;
+     height:5px;
+     margin: 3px -2px;
+     transition: .4s  cubic-bezier(0.68, -0.6, 0.32, 1.6);
+   
+   }
+   
+   
+   #label span:nth-of-type(1){
+     width:50%;
+     
+   }
+   
+   #label span:nth-of-type(2){
+     width:100%;
+   }
+   
+   
+   #label span:nth-of-type(3){
+     width:75%;
+    
+   }
+   
+   
+   #label input[type="checkbox"]{
+     display:none;
+ 
+   }
+   
+   
+   #label input[type="checkbox"]:checked ~ span:nth-of-type(1){
+     transform-origin:bottom;
+     transform:rotatez(45deg) translate(4px,0px);
+     background: #000;
+   }
+   
+   
+   #label input[type="checkbox"]:checked ~ span:nth-of-type(2){
+     
+     transform-origin:top;
+     transform:rotatez(-45deg) translate(-2px,0px);
+     background: #000;
+   }
+   
+   
+   #label input[type="checkbox"]:checked ~ span:nth-of-type(3){
+     
+     transform-origin:bottom;
+     width:50%;
+     transform: translate(20px,-2px) rotatez(45deg);
+     background: #000;
+   
+   }
+
+#nav{
+  height: 100vh;
+  width: 0px;
+  overflow-y: hidden;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #fffb1d;
+  transition: 0.5s;
+  border-radius: 0 40px 40px 0;
+  padding-bottom: 700px;
+  max-width: 400px;
+  
+}
+.inNav{
+  margin-top: 80px;
+  padding: 30px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  height: 100%;
+  position: absolute;
+
+  
+}
+.inNav::-webkit-scrollbar{
+display: none;
+}
+.inNav  h3{
+  color: rgb(255, 0, 0);
+ 
+  }
+.inNav  a{
+  color: #000;
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  /* margin: 10px 0; */
+}
+.inNav  a:hover{
+  color: rgb(0, 4, 233);
+  transition: 0.2s;
+}
+.inNav a img{
+  float: left;
+  height: 30px;
+  display: flex;
+  flex-direction: row;
+  padding:  4px;
+
+}
+.inNav a h2{
+
+  padding-top: 7px;
+
+}
+
+.switch {
+  position: relative;
+
+  width: 60px;
+  height: 34px;
+  margin-left: 5px;
+  float: left;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+  
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+  z-index: -10;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #05fc11;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #05fc11;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+.ss{
+  display: flex;
+
+}
+#geo-con{
+  margin-top: 20px;
+      width: 250px;
+      background-color: #71ffff;
+      border-radius: 10px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      border: 2px solid black;
+    }
+    
+
+    
+    #geo-con div{
+      font-size: 20px;
+      font-weight: bold;
+      color: #000;
+      padding: 2px ;
+      }
+.null{
+  height: 800px;
+}
+#dwn-app-div{
+  background-color: #71ffff;
+  color: rgb(0, 0, 0);
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 10px;
+  text-align: center;
+  width: 250px;
+  border: 2px solid black;
+}
+
+
+#dwn-app-div button{
+  margin: 0 auto;
+  padding: 10px;
+  font-size: 19px;
+  background-color: #fffb1d;
+  color: rgb(0, 0, 0);
+  outline: none;
+  border-radius: 10px;
+  border: 2px solid black;
+}
+
+#dwn-app-div button:hover{
+
+  background-color: rgb(255, 196, 242);
+  outline: none;
+
+}
