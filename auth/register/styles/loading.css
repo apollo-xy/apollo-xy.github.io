@@ -1,0 +1,78 @@
+#loadingFullscreen{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: none;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #000;
+  z-index: 1111;
+  text-align: center;
+  user-select: none;
+
+
+}
+#loadingFullscreen #imgLogo{
+  text-align: center;
+  
+}
+#loadingFullscreen #imgLogo img{
+width: 120px;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+/* a loading dot */
+#dots{
+
+
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 10px;
+}
+.loadingDot {
+width: 10px;
+height: 20px;
+background: #39ff19;
+margin: 5px;
+animation: 1s infinite alternate anim-loadingDot;
+animation-timing-function: ease-in-out;
+border-radius: 999px;
+}
+
+/* set animation delay for each loading dot */
+.loadingDot--2 {
+animation-delay: .10s;
+}
+
+.loadingDot--3 {
+animation-delay: .20s;
+}
+
+.loadingDot--4 {
+animation-delay: .30s;
+}
+
+/* keyframes for loading dot */
+@keyframes anim-loadingDot {
+0% {
+    transform: scale( 1 );
+}
+
+100% {
+    transform: scale( .3 );
+}
+}
+
+#error-msg{
+  color: white;
+  font-size: 17px;
+  letter-spacing: 1px;
+  
+}
