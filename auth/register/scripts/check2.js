@@ -29,7 +29,7 @@ function generateP(j) {
 $(document).ready(function() {
 
 
-  if(window.location.hostname !== "localhost"){
+  if(window.location.hostname !== "apollo-xy.github.io"){
     window.location.replace("/notFound?error=Invalid Origin");
   
     }  
