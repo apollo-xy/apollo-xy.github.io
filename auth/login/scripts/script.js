@@ -139,7 +139,7 @@ function redirect(u){
             }            
         }
     }else{
-        window.location.replace("https://apollo-xy.github.io/verifyEmail");
+        window.location.replace("https://apollo-xy.github.io/auth/verifyEmail");
     }
 
 }
