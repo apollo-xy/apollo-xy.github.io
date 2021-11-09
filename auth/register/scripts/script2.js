@@ -75,7 +75,7 @@ window.addEventListener('load',()=>{
                                             
                                               }).then(() => {
                                                 console.log("Profile Updated!");
-                                                window.location.replace("https://apollo-xy.github.io/verifyEmail");
+                                                window.location.replace("https://apollo-xy.github.io/auth/verifyEmail");
                                                 // Update successful
                                                 // ...
                                               })
