@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>ApolloXY: Connecting People & Technology</title>
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="#000">
+    <meta http-equiv="X-UA-Ct ompatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <meta name="author" content="Atharva">
+    <meta name="application-name" content="ApolloXY">
+    <meta name="keywords" content="ApolloXY, apolloxy verify, apollo-xy verify, Apollo-XY verify, apolloxy.git, apollo_xy, xy_apollo">
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="ApolloXY Email Verification" />
+    <meta property="og:logo" content="https://apollo-xy.github.io/icon/icon-256x256.png">
+    <meta property="og:site_name" content="ApolloXY" />
+    <meta property="og:description" content="ApolloXY-Connecting People & Technolgy" />
+    <meta property="og:url" content="https://apollo-xy.github.io/" />
+    <meta property="og:image" content="https://apollo-xy.github.io/icon/banner.jpg">
+    <meta name="google-site-verification" content="fCkhRT1ISeBuBGZO3EyZxE3AEYk5jq3-sSyhzY-ZJYg" />
+    <meta http-equiv="origin-trial" content="AjvG5dh8QCVXMPAxrjL+6awzYG16b2rYiLwFoBfwm9wPsLVYNJP9Zh3haq/ajd+CHg5VkIWN6dwz87uh0FJ+AQQAAABzeyJvcmlnaW4iOiJodHRwczovL2Fwb2xsby14eS5naXRodWIuaW86NDQzIiwiZmVhdHVyZSI6IldlYkFwcExpbmtDYXB0dXJpbmciLCJleHBpcnkiOjE2MzQwODMxOTksImlzU3ViZG9tYWluIjp0cnVlfQ==">
+    <link rel="shortcut icon" href="https://apollo-xy.github.io/icon/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/menu.css">
+    <!-- <link rel="manifest" href="https://apollo-xy.github.io/icon/manifest.json"> -->
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-auth.js"></script>
+    <script src="https://apollo-xy.github.io/scripts/check.js"></script>
+
+
+
+
+
+
+</head>
+<body>    
+    <div id="main">
+        <div class="aa">
+            <div id="nav">
+                <div class="inNav">
+                    <div class="s1">
+                        <h3>General</h3>
+                        <a href="/home"><img src="https://img.icons8.com/metro/30/000000/home.png"/><h2>Home</h2></a>
+                        <a href="/technotools"><img src="https://img.icons8.com/ios-glyphs/30/000000/controller.png"/><h2>TechnoTools</h2></a>
+                        <a href="/blog"><img src="https://img.icons8.com/material/24/000000/wordpress--v1.png"/><h2>Blog</h2></a>
+                        <a href="/faq"><img src="https://img.icons8.com/metro/26/000000/faq.png"/><h2>FAQ</h2></a>
+                        <a href="/about"><img src="https://img.icons8.com/android/24/000000/about.png"/><h2>About us</h2></a>
+                        <a href="/contact"><img src="https://img.icons8.com/ios-filled/30/000000/contact-card.png"/><h2>Contact us</h2></a>
+                        <br><br>
+                        <h3>Accounts</h3>
+                        <a href="/auth/logout"><img src="https://img.icons8.com/ios-glyphs/30/000000/login-rounded-right.png"/><h2>Logout</h2></a>
+                        <br><br>
+                        <h3>Settings</h3>
+                        <div class="ss">
+                            <a><img src="https://img.icons8.com/ios-glyphs/30/000000/macos-full-screen.png"/><h2>Full Screen</h2></a>
+                            <label class="switch">
+                            <input type="checkbox" id="fss" onclick="fullScreen();">
+                            <span class="slider round"></span>
+                            </label>
+                        </div>
+                        <br>
+                        <h3>User Info</h3>
+                        <div id="geo-con">
+                            <div>Date: <span id="date"></span></div>
+                            <div>Time: <span id="time"></span></div>
+                            <div>IP: <span id="ip"></span></div>
+                            <div>Country: <img id="flag" height="20" /> <span id="country"></span></div>
+                            <div>City: <span id="city"></span></div>
+                            <div>State: <span id="state"></span></div>
+                            <div>Postal: <span id="postal"></span></div>
+                            <div>Time Zone: <span id="timezone"></span></div>
+                            <div>Latitude: <span id="latitude"></span></div>
+                            <div>Longitude: <span id="longitude"></span></div>
+                            <div>Org: <span id="org"></span></div>
+                            <div>Device: <span id="device"></span></div>
+                            <div>Browser: <span id="browser"></span></div>
+                            <div>System: <span id="os"></span></div>
+                            <div>hasTouch: <span id="hTouch"></span></div>
+                            <div>Battery Charging: <span id="charging"></span></div>
+                            <div>Battery Level: <span id="battery"></span></div>
+                            <div>Network Type: <span id="cnn_type">null</span></div>
+                            <div>Bandwidth: <span id="cnn_st"></span></div>
+                    
+                          </div>
+                          <br>
+                          <h3>Legal</h3>
+                        
+                          <a href="/disclaimer"><img src="https://img.icons8.com/ios-glyphs/30/000000/error.png"/><h2>Disclaimer</h2></a>
+                          <a href="/terms"><img src="https://img.icons8.com/material-rounded/24/000000/terms-and-conditions.png"/><h2>Terms of service</h2></a>
+                          <a href="/privacy"><img src="https://img.icons8.com/material/24/000000/privacy-policy.png"/><h2>Privacy policy</h2></a>
+                          <a href="/cookies"><img src="https://img.icons8.com/ios-glyphs/30/000000/cookie.png"/><h2>Cookies policy</h2></a>
+                          <br><br>
+                          <h3>Follow Us!</h3>
+                          <div class="ss">
+                            <a href="https://twitter.com/xy_apollo"><img src="https://img.icons8.com/ios-glyphs/40/000000/twitter--v1.png"/></a>
+                            <a href="https://www.instagram.com/apolloxy.git/"><img src="https://img.icons8.com/material-outlined/40/000000/instagram-new--v1.png"/></a>
+                            <a href="https://www.facebook.com/apolloxy.git"><img src="https://img.icons8.com/ios-glyphs/40/000000/facebook-new.png"/></a>    
+                            <a href="https://www.youtube.com/channel/UCJQ7ZWXIbAqN9qyJEJgPG8A"><img src="https://img.icons8.com/ios-glyphs/40/000000/youtube-play.png"/></a>
+                        </div>
+                        <br><br>
+                        <div id="dwn-app-div">
+                            <h2>Add to Home Screen</h2>
+                            <br><br><br>
+                            <button id="install">INSTALL</button>
+                            <button id="openAPPid" onclick="openAPP()" style="display: none;">OPEN</button>
+                            <a id="openAPPlink" href="/" target="_blank"></a>
+                        </div>
+                          <div class="null"></div>
+
+
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="header">
+                <div class="right">
+                    <a href="/auth/logout" class="loginbtn">Logout</a>
+  
+                </div>
+    
+                <div class="left">
+                    
+                    <label id="label">
+                        <input type="checkbox" id="Mcheck" onclick="menu(); "> 
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </label> 
+                    
+                </div>
+            </div>
+            <div class="sec">
+                <img src="/email-verification.png" alt="email" height="200">
+                <div class="secin">
+                    <h1>One Step</h1>
+                    <h2>To Go Ahead!</h2>
+                    <br>
+                    <p>A verification email has been sent to <b><span id="mail"></span></b></p>
+                    <br>
+                    <p>Please click the verification link to verify your account</p>
+                    <div class="but1">
+                        <button id="resentBtn">✦ Resend ✦</button>
+                        
+                    </div>
+                
+                        <p id="mss1">Mail sent successfully!</p>
+                        <p id="errorr4">Too many requests. Please try again later.</p>
+                    
+                </div>
+                
+
+            </div>
+
+         
+           
+         
+            
+       
+
+            <div class="footer">
+                <div class="up">
+                    <img src="https://apollo-xy.github.io/icon/icon-384x384.png" alt="logo" height="80">
+                    <p>Made with❤️by Atharva</p>
+                    <p>ApolloXY © 2021</p>
+                </div>
+                <div class="dwn">
+                    <div class="a">
+                        <p class="t">Policies</p>
+                       <a href="terms">Terms</a>
+                       <a href="privacy">Privacy</a>
+                       <a href="disclaimer">Disclaimer</a>
+                       <a href="cookie">Cookie</a>
+    
+                    </div>
+                    <div class="a">
+                        <p class="t">Support</p>
+                        <a href="contact">Contact</a>
+                        <a href="about">About</a>
+                        <a href="blog">Blog</a>
+                        <a href="faq">FAQ</a>
+                        <a href="about_me">Creator</a>
+                       
+
+                    </div>
+                    <div class="a">
+                        <p class="t">Products</p>
+                        <a href="papermail">Paper Mail</a>
+                        <a href="pvtnote">PvtNote</a>
+                        <a href="easyshare">Easy Share</a>
+                        <a href="technotools">More...</a>
+                    </div>
+                </div>
+                    <a href="https://twitter.com/xy_apollo"><img src="https://img.icons8.com/ios-glyphs/40/000000/twitter--v1.png"/></a>
+                    <a href="https://www.instagram.com/apolloxy.git/"><img src="https://img.icons8.com/material-outlined/40/000000/instagram-new--v1.png"/></a>
+                    <a href="https://www.facebook.com/apolloxy.git"><img src="https://img.icons8.com/ios-glyphs/40/000000/facebook-new.png"/></a>    
+                    <a href="https://www.youtube.com/channel/UCJQ7ZWXIbAqN9qyJEJgPG8A"><img src="https://img.icons8.com/ios-glyphs/40/000000/youtube-play.png"/></a>
+          
+                
+            </div>
+           
+        </div>
+       
+    
+        
+    </div>
+    
+        
+
+</body>
+
+<script src="scripts/script.js" ></script>
+<!-- <script>
+
+
+
+    if ('serviceWorker' in navigator) {
+     navigator.serviceWorker.register('https://apollo-xy.github.io/sw.js')
+   }
+   
+   let deferredPrompt;
+   var isInstalled = 1;
+   const addBtn = document.getElementById('install');
+   document.getElementById("openAPPid").style.display = "block";
+   document.getElementById("install").style.display = "none";
+   window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault();
+      deferredPrompt = e;
+      document.getElementById("openAPPid").style.display = "none";
+      document.getElementById("install").style.display = "block";
+   
+     addBtn.addEventListener('click', () => {
+       deferredPrompt.prompt();
+        deferredPrompt.userChoice.then((choiceResult) => {
+         if (choiceResult.outcome === 'accepted') {
+           document.getElementById("openAPPid").style.display = "block";
+           document.getElementById("install").style.display = "none";
+           console.log('User accepted the A2HS prompt');
+         } else {
+           console.log('User dismissed the A2HS prompt');
+         }
+         deferredPrompt = null;
+       });
+     });
+
+   });
+   
+   
+   
+   var isPWAinBrowser = true;
+   // replace standalone with fullscreen or minimal-ui according to your manifest
+   if (matchMedia('(display-mode: standalone)').matches) {
+      // Android and iOS 11.3+
+      document.getElementById("dwn-app-div").style.display = "none";
+      isPWAinBrowser = false;
+   } else if ('standalone' in navigator) {
+      // useful for iOS < 11.3
+      isPWAinBrowser = !navigator.standalone;
+   
+   }
+
+</script> -->
+
+</html>
