@@ -12,7 +12,7 @@ window.addEventListener('load',()=>{
         console.log(users);
         if(users){
             if(users.emailVerified ===false){
-                window.location.replace("https://apollo-xy.github.io/verifyEmail");
+                window.location.replace("https://apollo-xy.github.io/auth/verifyEmail");
             }else{
                 window.location.replace("https://apollo-xy.github.io/home");
             }
