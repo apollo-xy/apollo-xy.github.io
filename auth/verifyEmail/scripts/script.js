@@ -3,15 +3,6 @@ const auth = firebase.auth();
 
 
 window.addEventListener('load',()=>{
-  //logOut()
-//   auth.signOut();
-
-const promise = auth.signInWithEmailAndPassword("fake2@zetmail.com", "1234567890");
-promise.then(function(firebaseUser) {
-
-   console.log(firebaseUser.user.uid)
-});
-
 
     auth.onAuthStateChanged(function(user) {
         if (user) {
