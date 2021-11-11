@@ -42,7 +42,7 @@ window.addEventListener('load',()=>{
                         if(username.length <=1){
                             document.getElementById("error").innerHTML = "Please enter username.";
                         }else{
-                            var regEx = /^[0-9a-zA-Z_]+$/;
+                            var regEx = /^[0-9a-z_]+$/;
                             if (username.search(regEx) === -1){
                                 document.getElementById("error").innerHTML = "Username can contain letters, numbers and underscores(_)";
                                 }
