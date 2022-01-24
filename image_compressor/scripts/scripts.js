@@ -187,7 +187,7 @@ function compress(){
           elem.height = height;
           const ctx = elem.getContext('2d');
           ctx.drawImage(imga, 0, 0, width, height);
-          var png = ctx.canvas.toDataURL("image/png", 0.9);
+          var png = ctx.canvas.toDataURL("image/png", 0.4);
    
           if((width/height)>1.15){
             pdf.addPage([160, 90], "l");
