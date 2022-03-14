@@ -1,7 +1,8 @@
+//v1
 var ip=0, timezone=0, lat=0, lon=0, country=0, city=0, state=0, postal=0, org=0, chargingStatus=0, batteryLvl=0, device=0, os=0, br=0, swidth=0, sheight=0, touch=0, date=0, time=0, networkType=0, networkBandwidth=0, vUser=0, vStatus = 0, vLastseen = 0, vTimeSpent = 0, vLastpage =0;
 var unix = 0;
 const firebaseConfig = {
-    apiKey: "AIzaSyDKVT6FqbrNpP7SdSgoRabU-OOBGXonWCM",
+    apiKey: "AIzaSyBywAtQQdOVOc6pma-EZJziYEvMGPDLzV0",
     authDomain: "apollo-xy.firebaseapp.com",
     databaseURL: "https://apollo-xy-default-rtdb.asia-southeast1.firebasedatabase.app",
     projectId: "apollo-xy",
